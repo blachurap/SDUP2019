@@ -1,44 +1,36 @@
-clc;  clear; close all;
+clc; clear; close all;
 
 %%%%%%%%%%%%%%%%% Zmienne u¿ytkownika %%%%%%%%%%%%%%%%%
-
-Dlugosc_slowa_bitowego = 8;
-Alfa = 30;
-Calkowita_dlugosc_wektora_testujacego = 10000;
-
-Ilosc_symboli_testujacych = 5;
-
-%%%%%%%%%%%%%%%%% Zmienne lokalne %%%%%%%%%%%%%%%%%
-
-Ilosc_symboli = pow2(Dlugosc_slowa_bitowego);
+bit_word_length = 8;
+alpha = 30;
+test_vector_length = 10000;
+test_vector_segment_length = 8;
 
 %%%%%%%%%%%%%%%%% Program %%%%%%%%%%%%%%%%%
+number_of_symbols = pow2(bit_word_length);
+probability_vector = Generate_probability_vector(number_of_symbols, alpha);
 
-probability_vector = Generate_probability_vector(Ilosc_symboli, Alfa);
 figure(1);
 plot(probability_vector);
-xlabel('Numer probki'); 
-ylabel('Prawdopodobienstwo [%]');
+xlabel('Numer probki'); ylabel('Prawdopodobienstwo [%]');
 
-wektor = Generate_test_vector(probability_vector, Ilosc_symboli, Calkowita_dlugosc_wektora_testujacego);
-wektor_losowy = Randomize_vector(wektor);
+unrandomized_test_vector = Generate_test_vector(probability_vector, number_of_symbols, test_vector_length);
+test_vector = Randomize_vector(unrandomized_test_vector);
 
 figure(2);
-histogram(wektor_losowy, 0:Ilosc_symboli);
-xlabel('Numer probki'); 
-ylabel('Ilosc probek');
+histogram(test_vector, 0:number_of_symbols);
+xlabel('Numer probki'); ylabel('Ilosc probek');
 
 figure(3);
-plot(wektor_losowy, '.');
-xlabel('Indeks wektora'); 
-ylabel('Wartosc');
+plot(test_vector, '.');
+xlabel('Indeks wektora'); ylabel('Wartosc');
 
-wektor_testujacy = wektor_losowy(1, 1:Ilosc_symboli_testujacych),
+test_vector_segment = test_vector(1, 1:test_vector_segment_length),
 
 %Kodek Huffmana
-Dictionary = huffmandict(0:Ilosc_symboli-1, probability_vector./100);
-Encoded_vector = huffmanenco(wektor_testujacy, Dictionary),
+dictionary = huffmandict(0:number_of_symbols-1, probability_vector./100);
+encoded_vector = huffmanenco(test_vector_segment, dictionary),
 
-
-
-
+%Wgraj s³ownik i scenariusz testujacy do pliku tekstowego
+Generate_dictionary_text_file('Text_files/Dictionary.txt', dictionary);
+Generate_test_scenario_text_file('Text_files/Test_scenario.txt', test_vector_segment, encoded_vector);
