@@ -1,0 +1,7 @@
+Running: xsim.dir/huffman_ip_v1_0_behav/xsimk.exe -simmode gui -wdb huffman_ip_v1_0_behav.wdb -simrunnum 0 -socket 49322
+Design successfully loaded
+Design Loading Memory Usage: 5408 KB (Peak: 5408 KB)
+Design Loading CPU Usage: 61 ms
+Simulation completed
+Simulation Memory Usage: 6000 KB (Peak: 6000 KB)
+Simulation CPU Usage: 77 ms
