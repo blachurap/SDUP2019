@@ -18,11 +18,11 @@ module huffman_encoder(
     input enable,
     output reg [15:0] data_out);
     /* signals */ 
-    reg[16:0] data_out1,data_out2,data_out3;
+    reg[16:0] data_out1,data_out2,data_out3,data_out4;
     reg[4:0] codelength;
     /*used for data shifting */
     reg[5:0] cl_sum, cl_sum_prev;
-    reg[34:0] cl_sum_shift,mult_out;
+    reg[33:0] cl_sum_shift,mult_out;
     reg[6:0] counter64;
     reg cl_sum_rdy;
     reg full_flag1,half_flag1,half_flag2,full_flag2,half_flag3,full_flag3;
@@ -323,6 +323,7 @@ module huffman_encoder(
                 begin      
                    data_out2 <= data_out1;
                    data_out3 <= data_out2; 
+                   data_out4 <= data_out3; 
                 end 
              end 
 /*****************************************************************************/ 
@@ -393,7 +394,7 @@ always @ (posedge clk)
    begin 
    if (rst) 
        begin 
-       cl_sum_shift <= 39'b0;  
+       cl_sum_shift <= 34'b0;  
        end 
    else  
     begin 
@@ -445,7 +446,7 @@ always @ (posedge clk or posedge rst)
    begin 
    if (rst) 
        begin 
-       mult_out <= 39'b0;  
+       mult_out <= 34'b0;  
        full_flag1 <= 1'b0; half_flag2 <= 1'b0; 
        full_flag3 <= 1'b0; half_flag3 <= 1'b0; 
        full_flag4 <= 1'b0; half_flag4 <= 1'b0; 
@@ -454,7 +455,7 @@ always @ (posedge clk or posedge rst)
        end 
    else if (enable == 1'b1) 
        begin 
-         mult_out <= data_out3 * cl_sum_shift; 
+         mult_out <= data_out4 * cl_sum_shift; 
          full_flag2 <= full_flag1; half_flag2 <= half_flag1; 
          full_flag3 <= full_flag2; half_flag3 <= half_flag2; //tyle starczy?
          full_flag4 <= full_flag3; half_flag4 <= half_flag3; 
@@ -473,18 +474,18 @@ always @ (posedge clk or posedge rst)
    else if (enable == 1'b1) 
        begin 
          case({full_flag3, half_flag3}) 
-         2'b00: begin upper_reg1[16:5] <= mult_out[34:23] | upper_reg1[16:5]; 
-                      middle_reg1 <= mult_out[22:7] ; 
-                      lower_reg1 <= {mult_out[6:0],9'b0 }; end 
-         2'b01: begin upper_reg1[16:5] <= mult_out[34:23] | middle_reg1[16:5]; 
-                      middle_reg1 <= mult_out[22:7]; 
-                      lower_reg1 <= {mult_out[6:0],9'b0}; end 
-         2'b11: begin upper_reg1 <= mult_out[34:23] | lower_reg1; 
-                      middle_reg1 <= mult_out[22:7]; 
-                      lower_reg1 <= {16'b0}; end 
+         2'b00: begin  upper_reg1[16:1] <= mult_out[33:18] | upper_reg1[16:1]; 
+                       middle_reg1 <= mult_out[17:2] ; 
+                       lower_reg1 <= {mult_out[1:0],14'b0 }; end 
+         2'b01: begin  upper_reg1[16:1] <= mult_out[33:18] | middle_reg1[16:1]; 
+                       middle_reg1 <= mult_out[17:2]; 
+                       lower_reg1 <= {mult_out[1:0],14'b0}; end 
+         2'b11: begin  upper_reg1 <= mult_out[33:18] | lower_reg1; 
+                       middle_reg1 <= mult_out[17:2]; 
+                       lower_reg1 <= {16'b0}; end 
          default:begin upper_reg1 <= upper_reg1; 
-                      middle_reg1 <= middle_reg1; 
-                      lower_reg1 <= lower_reg1; end 
+                       middle_reg1 <= middle_reg1; 
+                       lower_reg1 <= lower_reg1; end 
          endcase 
        end      
    end 
@@ -501,9 +502,9 @@ always @ (posedge clk or posedge rst)
    else if (enable == 1'b1) 
        begin 
           upper_reg2 <= upper_reg1; 
+          
           middle_reg2 <= middle_reg1; 
-          middle_reg3 <= middle_reg2; 
-           
+          middle_reg3 <= middle_reg2;  
        end      
    end 
  
