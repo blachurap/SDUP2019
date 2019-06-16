@@ -16,20 +16,20 @@ module huffman_encoder(
     input rst,
     input [7:0] data_in,
     input enable,
-    output reg [15:0] data_out,
+    output reg [15:0] data_out);
     /* signals */ 
-    reg[16:0] data_out1,data_out2,data_out3,
-    reg[4:0] codelength,
+    reg[16:0] data_out1,data_out2,data_out3;
+    reg[4:0] codelength;
     /*used for data shifting */
-    reg[5:0] cl_sum, cl_sum_prev,
-    reg[34:0] cl_sum_shift,mult_out,
-    reg[6:0] counter64,
-    reg cl_sum_rdy,
-    reg full_flag1,half_flag1,half_flag2,full_flag2,half_flag3,full_flag3,
-    reg full_flag4,half_flag4,full_flag5,full_flag6,half_flag5, 
-    reg[16:1] upper_reg1,middle_reg1,lower_reg1,
-    reg[16:1] upper_reg2, middle_reg2, middle_reg3
-        );
+    reg[5:0] cl_sum, cl_sum_prev;
+    reg[34:0] cl_sum_shift,mult_out;
+    reg[6:0] counter64;
+    reg cl_sum_rdy;
+    reg full_flag1,half_flag1,half_flag2,full_flag2,half_flag3,full_flag3;
+    reg full_flag4,half_flag4,full_flag5,full_flag6,half_flag5;
+    reg[16:1] upper_reg1,middle_reg1,lower_reg1;
+    reg[16:1] upper_reg2, middle_reg2, middle_reg3;
+        
     
     `include "codelength.v"
     `include "dictionary.v"
