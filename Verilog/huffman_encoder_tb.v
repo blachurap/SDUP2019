@@ -12,29 +12,30 @@ module huffman_encoder_tb();
 reg sys_clk, sys_rst;
 reg enable;
 reg [7:0] data_in;
-wire [7:0] data_out;
+wire [15:0] data_out;
 
 initial
 begin
     sys_clk = 0;
     sys_rst = 0;
     enable = 0;
+    enable = 0;
     
     sys_rst = #200 1;
     sys_rst = #200 0;
     
     enable = #200 1;
-    data_in = #300 8'h64;
-    data_in = #200 8'h70;
-    data_in = #300 8'h61;
-    data_in = #200 8'h62;
-    data_in = #300 8'h63;
-    data_in = #200 8'h64;
-    data_in = #300 8'h65;
-    data_in = #200 8'h66;
+    data_in = #1000 8'd0;
+    data_in = #1100 8'd10;
+    data_in = #1000 8'd50;
+    data_in = #1100 8'd100;
+    data_in = #1000 8'd150;
+    data_in = #1100 8'd200;
+    data_in = #1000 8'd250;
+    data_in = #1300 8'd255;
     enable = #200 0;
-    data_in = #300 8'h6A;
-    data_in = #200 8'h61;
+    data_in = #1000 8'd100;
+    data_in = #1000 8'd255;
 end
 
 always #50 sys_clk = ~sys_clk;   //zegar na 10MHz
