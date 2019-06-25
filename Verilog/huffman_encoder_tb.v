@@ -11,6 +11,7 @@ module huffman_encoder_tb();
 
 reg sys_clk, sys_rst;
 reg enable;
+reg in_enable;
 reg [7:0] data_in;
 wire [15:0] data_out;
 
@@ -20,11 +21,13 @@ begin
     sys_rst = 0;
     enable = 0;
     enable = 0;
+    in_enable=0;
     
     sys_rst = #200 1;
     sys_rst = #200 0;
     
     enable = #200 1;
+    in_enable = #100 1;
     data_in = #450 8'd5;
     data_in = #100 8'd68;
     data_in = #100 8'd50;
@@ -33,8 +36,9 @@ begin
     data_in = #100 8'd200;
     data_in = #100 8'd250;
     data_in = #100 8'd255;
-    enable = #1600 0;
-    data_in = #1000 8'd100;
+    in_enable = #1200 0;
+    data_in = #100 8'd100;
+    enable = #100 0;
     data_in = #1000 8'd255;
 end
 
@@ -44,8 +48,9 @@ huffman_encoder UUT(
             .clk(sys_clk),
             .rst(sys_rst),
             .enable(enable),
+            .in_enable(in_enable),
             .data_in(data_in),
-            .data_out(data_out)
+            .data_out(data_out)            
             );
             
 endmodule

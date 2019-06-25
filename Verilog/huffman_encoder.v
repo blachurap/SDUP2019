@@ -15,18 +15,20 @@ module huffman_encoder(
     input clk,
     input rst,
     input [7:0] data_in,
-    input enable,
+    input enable, in_enable,
     output reg [15:0] data_out);
     /* signals */ 
     reg[16:0] data_out1,data_out2,data_out3,data_out4,data_out5;
     reg[4:0] codelength;
     /*used for data shifting */
     reg[5:0] cl_sum, cl_sum_prev;
-    reg[33:0] cl_sum_shift,mult_out;
+    reg[33:0] cl_sum_shift,mult_out, mult_out2, mult_out3;
     reg[6:0] counter64;
     reg cl_sum_rdy;
     reg full_flag1,half_flag1,half_flag2,full_flag2,half_flag3,full_flag3;
-    reg full_flag4,half_flag4,full_flag5,full_flag6,half_flag5;
+    reg full_flag4,half_flag4,full_flag5,full_flag6,half_flag5,half_flag6;
+    reg full_flag7,full_flag8,half_flag7,half_flag8;
+    
     reg[15:0] upper_reg1,middle_reg1,lower_reg1;
     reg[15:0] upper_reg2, middle_reg2, middle_reg3;
         
@@ -36,14 +38,14 @@ module huffman_encoder(
      
     /*****************************************************************************/ 
 
-    always @(posedge clk or posedge rst) begin
+    always @(posedge clk) begin
     
             if(rst)
                 begin
                  data_out1 <= 8'd0; 
                  codelength <= 5'd0;
                 end    
-            else if(enable)
+            else if(in_enable && enable)
             begin
                 case(data_in)
                     8'd0  : begin  data_out1 <= symb_0  ; codelength <= length_0  ; end
@@ -312,7 +314,7 @@ module huffman_encoder(
         end
 /**************************************************************************************************/
 /*pipelining*/
-              always @ (posedge clk or posedge rst) 
+              always @ (posedge clk ) 
              begin 
               if (rst) 
                  begin 
@@ -354,7 +356,7 @@ in the lower register is moved up to the upper register.*/
 that the upper_reg is full and full flag indicates that the lower register is full. 
 cl_sum_prev gives the sum of the codelengths which is used to set the flags. cl_sum 
 is used to find out the number of shifts to be done in the barrel shifts.*/ 
-    always @ (posedge clk or posedge rst) 
+    always @ (posedge clk) 
      begin 
     if (rst) 
        begin 
@@ -445,30 +447,38 @@ end
 /* multiplier used to do barrel shifting of codeword. flags pipeleined to match 
 the pipe line stages of upper, middle and lower registers. */ 
  
-always @ (posedge clk or posedge rst) 
+always @ (posedge clk) 
    begin 
    if (rst) 
        begin 
-       mult_out <= 34'b0;  
+       mult_out <= 34'b0; 
+       mult_out2 <= 34'b0; 
+       mult_out3 <= 34'b0; 
        full_flag2 <= 1'b0; half_flag2 <= 1'b0; 
        full_flag3 <= 1'b0; half_flag3 <= 1'b0; 
        full_flag4 <= 1'b0; half_flag4 <= 1'b0; 
        full_flag5 <= 1'b0; half_flag5 <= 1'b0; 
        full_flag6 <= 1'b0; 
+       full_flag7 <= 1'b0; half_flag6 <= 1'b0; 
+       full_flag8 <= 1'b0; half_flag7 <= 1'b0; 
        end 
    else if (enable == 1'b1) 
        begin 
          mult_out <= data_out4 * cl_sum_shift; 
+         mult_out2 <= mult_out;
+         mult_out3 <= mult_out2;
          full_flag2 <= full_flag1; half_flag2 <= half_flag1; 
          full_flag3 <= full_flag2; half_flag3 <= half_flag2; //tyle starczy?
          full_flag4 <= full_flag3; half_flag4 <= half_flag3; 
          full_flag5 <= full_flag4; half_flag5 <= half_flag4; 
          full_flag6 <= full_flag5;  
+        full_flag7 <= full_flag6;  half_flag6 <= half_flag5; 
+        full_flag8 <= full_flag7;  half_flag7 <= half_flag6; 
        end 
 end 
   
 /*****************************************************************************/ 
-always @ (posedge clk or posedge rst) 
+always @ (posedge clk) 
    begin 
    if (rst) 
        begin 
@@ -476,15 +486,15 @@ always @ (posedge clk or posedge rst)
        end 
    else if (enable == 1'b1) 
        begin 
-         case({full_flag4, half_flag4}) 
-         2'b00: begin  upper_reg1[15:0] <= mult_out[33:18] | upper_reg1[15:0]; 
-                       middle_reg1 <= mult_out[17:2]; 
-                       lower_reg1 <= {mult_out[1:0],14'b0 }; end 
-         2'b01: begin  upper_reg1[15:0] <= mult_out[33:18] | middle_reg1[15:0]; 
-                       middle_reg1 <= mult_out[17:2]; 
-                       lower_reg1 <= {mult_out[1:0],14'b0}; end 
-         2'b11: begin  upper_reg1 <= mult_out[33:18] | lower_reg1; 
-                       middle_reg1 <= mult_out[17:2]; 
+         case({full_flag6, half_flag6}) 
+         2'b00: begin  upper_reg1[15:0] <= mult_out3[33:18] | upper_reg1[15:0]; 
+                       middle_reg1 <= mult_out3[17:2]; 
+                       lower_reg1 <= {mult_out3[1:0],14'b0 }; end 
+         2'b01: begin  upper_reg1[15:0] <= mult_out3[33:18] | middle_reg1[15:0]; 
+                       middle_reg1 <= mult_out3[17:2]; 
+                       lower_reg1 <= {mult_out3[1:0],14'b0}; end 
+         2'b11: begin  upper_reg1 <= mult_out3[33:18] | lower_reg1; 
+                       middle_reg1 <= mult_out3[17:2]; 
                        lower_reg1 <= {16'b0}; end 
          default:begin upper_reg1 <= upper_reg1; 
                        middle_reg1 <= middle_reg1; 
@@ -495,7 +505,7 @@ always @ (posedge clk or posedge rst)
  
 /*****************************************************************************/ 
  
-always @ (posedge clk or posedge rst) 
+always @ (posedge clk ) 
    begin 
    if (rst) 
        begin 
@@ -513,7 +523,7 @@ always @ (posedge clk or posedge rst)
  
 /*****************************************************************************/ 
  
-always @ (posedge clk or posedge rst) //wywalic rst z kazdej listy wrazliwosci!@!!
+always @ (posedge clk)
    begin 
    if (rst) 
        begin 
@@ -521,9 +531,9 @@ always @ (posedge clk or posedge rst) //wywalic rst z kazdej listy wrazliwosci!@
        end 
    else if (enable == 1'b1) 
        begin 
-       if (half_flag5 == 1'b1) 
+       if (half_flag7 == 1'b1) 
            data_out <= upper_reg2; 
-       else if (full_flag6 == 1'b1) 
+       else if (full_flag8 == 1'b1) 
            data_out <= middle_reg3; 
 		end 
     end 
@@ -531,7 +541,7 @@ always @ (posedge clk or posedge rst) //wywalic rst z kazdej listy wrazliwosci!@
 /*****************************************************************************/ 
 /* counter that counts upto 64. */ 
  
-always @ (posedge clk or posedge rst) 
+always @ (posedge clk ) 
    begin 
    if (rst) 
        begin 
@@ -548,7 +558,7 @@ always @ (posedge clk or posedge rst)
  
 /* cl_sum starts after 2 clks from reset. */ 
  
-always @ (posedge clk or posedge rst) 
+always @ (posedge clk) 
    begin 
    if (rst) 
        begin 
