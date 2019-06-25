@@ -32,5 +32,5 @@ dictionary = huffmandict(0:number_of_symbols-1, probability_vector./100);
 encoded_vector = huffmanenco(test_vector_segment, dictionary),
 
 %Wgraj s³ownik i scenariusz testujacy do pliku tekstowego
-Generate_dictionary_text_file('Text_files/Dictionary.txt', dictionary);
-Generate_test_scenario_text_file('Text_files/Test_scenario.txt', test_vector_segment, encoded_vector);
+Generate_dictionary_files('Generated_files/', 'Dictionary.c', 'Dictionary.h', dictionary);
+Generate_test_scenario_files('Generated_files/', 'Test_scenario.c', 'Test_scenario.h', test_vector_segment, encoded_vector);
