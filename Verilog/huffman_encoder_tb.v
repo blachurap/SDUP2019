@@ -25,15 +25,15 @@ begin
     sys_rst = #200 0;
     
     enable = #200 1;
+    data_in = #450 8'd5;
     data_in = #100 8'd68;
-    data_in = #11000 8'd10;
-    data_in = #1000 8'd50;
-    data_in = #1100 8'd100;
-    data_in = #1000 8'd150;
-    data_in = #1100 8'd200;
-    data_in = #1000 8'd250;
-    data_in = #1300 8'd255;
-    enable = #200 0;
+    data_in = #100 8'd50;
+    data_in = #100 8'd100;
+    data_in = #100 8'd150;
+    data_in = #100 8'd200;
+    data_in = #100 8'd250;
+    data_in = #100 8'd255;
+    enable = #1600 0;
     data_in = #1000 8'd100;
     data_in = #1000 8'd255;
 end
