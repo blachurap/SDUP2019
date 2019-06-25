@@ -2,7 +2,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 /*********************************************************************************
 *   huffman_encoder.v
-*   Modu³ enkodera Huffmana korzystaj¹cy ze statycznego drzewa kodowego
+*   ModuÂ³ enkodera Huffmana korzystajÂ¹cy ze statycznego drzewa kodowego
 *
 *   ver. 0.1
 *   Tested: no
@@ -18,7 +18,7 @@ module huffman_encoder(
     input enable,
     output reg [15:0] data_out);
     /* signals */ 
-    reg[16:0] data_out1,data_out2,data_out3,data_out4;
+    reg[16:0] data_out1,data_out2,data_out3,data_out4,data_out5;
     reg[4:0] codelength;
     /*used for data shifting */
     reg[5:0] cl_sum, cl_sum_prev;
@@ -27,8 +27,8 @@ module huffman_encoder(
     reg cl_sum_rdy;
     reg full_flag1,half_flag1,half_flag2,full_flag2,half_flag3,full_flag3;
     reg full_flag4,half_flag4,full_flag5,full_flag6,half_flag5;
-    reg[16:1] upper_reg1,middle_reg1,lower_reg1;
-    reg[16:1] upper_reg2, middle_reg2, middle_reg3;
+    reg[15:0] upper_reg1,middle_reg1,lower_reg1;
+    reg[15:0] upper_reg2, middle_reg2, middle_reg3;
         
     
     `include "codelength.v"
@@ -318,12 +318,15 @@ module huffman_encoder(
                  begin 
                 data_out2   <= 18'b0; 
                 data_out3   <= 18'b0;
+                data_out4   <= 18'b0;
+                data_out5   <= 18'b0;
                 end 
             else  
                 begin      
                    data_out2 <= data_out1;
                    data_out3 <= data_out2; 
-                   data_out4 <= data_out3; 
+                   data_out4 <= data_out3;
+                   data_out5 <= data_out4; 
                 end 
              end 
 /*****************************************************************************/ 
@@ -447,7 +450,7 @@ always @ (posedge clk or posedge rst)
    if (rst) 
        begin 
        mult_out <= 34'b0;  
-       full_flag1 <= 1'b0; half_flag2 <= 1'b0; 
+       full_flag2 <= 1'b0; half_flag2 <= 1'b0; 
        full_flag3 <= 1'b0; half_flag3 <= 1'b0; 
        full_flag4 <= 1'b0; half_flag4 <= 1'b0; 
        full_flag5 <= 1'b0; half_flag5 <= 1'b0; 
@@ -473,11 +476,11 @@ always @ (posedge clk or posedge rst)
        end 
    else if (enable == 1'b1) 
        begin 
-         case({full_flag3, half_flag3}) 
-         2'b00: begin  upper_reg1[16:1] <= mult_out[33:18] | upper_reg1[16:1]; 
-                       middle_reg1 <= mult_out[17:2] ; 
+         case({full_flag4, half_flag4}) 
+         2'b00: begin  upper_reg1[15:0] <= mult_out[33:18] | upper_reg1[15:0]; 
+                       middle_reg1 <= mult_out[17:2]; 
                        lower_reg1 <= {mult_out[1:0],14'b0 }; end 
-         2'b01: begin  upper_reg1[16:1] <= mult_out[33:18] | middle_reg1[16:1]; 
+         2'b01: begin  upper_reg1[15:0] <= mult_out[33:18] | middle_reg1[15:0]; 
                        middle_reg1 <= mult_out[17:2]; 
                        lower_reg1 <= {mult_out[1:0],14'b0}; end 
          2'b11: begin  upper_reg1 <= mult_out[33:18] | lower_reg1; 
@@ -510,7 +513,7 @@ always @ (posedge clk or posedge rst)
  
 /*****************************************************************************/ 
  
-always @ (posedge clk or posedge rst) 
+always @ (posedge clk or posedge rst) //wywalic rst z kazdej listy wrazliwosci!@!!
    begin 
    if (rst) 
        begin 
@@ -518,9 +521,9 @@ always @ (posedge clk or posedge rst)
        end 
    else if (enable == 1'b1) 
        begin 
-       if (half_flag4 == 1'b1) 
+       if (half_flag5 == 1'b1) 
            data_out <= upper_reg2; 
-       else if (full_flag5 == 1'b1) 
+       else if (full_flag6 == 1'b1) 
            data_out <= middle_reg3; 
 		end 
     end 
@@ -562,7 +565,3 @@ always @ (posedge clk or posedge rst)
 /*****************************************************************************/ 
 
 endmodule
-
-
-
-    
