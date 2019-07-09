@@ -16,6 +16,7 @@ module huffman_encoder(
     input rst,
     input [7:0] data_in,
     input enable, in_enable,
+    output reg out_rdy,
     output reg [15:0] data_out);
     /* signals */ 
     reg[16:0] data_out1,data_out2,data_out3,data_out4,data_out5;
@@ -563,6 +564,7 @@ always @ (posedge clk)
    if (rst) 
        begin 
        cl_sum_rdy <= 1'b0; 
+       out_rdy <= 1'b0;
        end 
    else  
         begin 
@@ -570,6 +572,10 @@ always @ (posedge clk)
               cl_sum_rdy <= 1'b1; 
           else  
               cl_sum_rdy <= cl_sum_rdy; 
+          if (counter64 == 7'd12)  //powinnno to byæ 15 taktów od in_enable 
+              out_rdy <= 1'b1; 
+          else  
+              out_rdy <= out_rdy; 
         end 
   end   
 /*****************************************************************************/ 

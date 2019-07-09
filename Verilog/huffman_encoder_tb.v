@@ -14,6 +14,7 @@ reg enable;
 reg in_enable;
 reg [7:0] data_in;
 wire [15:0] data_out;
+wire out_rdy;
 
 initial
 begin
@@ -27,8 +28,8 @@ begin
     sys_rst = #200 0;
     
     enable = #200 1;
-    in_enable = #100 1;
-    data_in = #450 8'd5;
+    in_enable = 1;
+    data_in = 8'd5;
     data_in = #100 8'd68;
     data_in = #100 8'd50;
     data_in = #100 8'd100;
@@ -50,6 +51,7 @@ huffman_encoder UUT(
             .enable(enable),
             .in_enable(in_enable),
             .data_in(data_in),
+            .out_rdy(out_rdy),
             .data_out(data_out)            
             );
             
