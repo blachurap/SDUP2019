@@ -16,7 +16,7 @@ module huffman_encoder(
     input rst,
     input [7:0] data_in,
     input enable, in_enable,
-    output reg out_rdy,
+    output reg out_valid,
     output reg [15:0] data_out);
     /* signals */ 
     reg[16:0] data_out1,data_out2,data_out3,data_out4,data_out5;
@@ -25,6 +25,7 @@ module huffman_encoder(
     reg[5:0] cl_sum, cl_sum_prev;
     reg[33:0] cl_sum_shift,mult_out, mult_out2, mult_out3;
     reg[6:0] counter64;
+    reg[5:0] counter32;
     reg cl_sum_rdy;
     reg full_flag1,half_flag1,half_flag2,full_flag2,half_flag3,full_flag3;
     reg full_flag4,half_flag4,full_flag5,full_flag6,half_flag5,half_flag6;
@@ -564,7 +565,7 @@ always @ (posedge clk)
    if (rst) 
        begin 
        cl_sum_rdy <= 1'b0; 
-       out_rdy <= 1'b0;
+       
        end 
    else  
         begin 
@@ -572,10 +573,47 @@ always @ (posedge clk)
               cl_sum_rdy <= 1'b1; 
           else  
               cl_sum_rdy <= cl_sum_rdy; 
-          if (counter64 == 7'd12)  //powinnno to byæ 15 taktów od in_enable 
-              out_rdy <= 1'b1; 
+          end 
+  end  
+  /*****************************************************************************/ 
+/* counter that counts upto 64. */ 
+ 
+always @ (posedge clk ) 
+   begin 
+   if (rst || enable == 1'b0) 
+       begin 
+       counter32 <= 6'b000000; 
+       end 
+       else if (enable == 1'b1 && in_enable ==1'b1 ) 
+        begin 
+          if (counter32 < 6'd13) 
+              counter32 <= counter32 + 1; 
+         else  
+              counter32 <= 6'd13; 
+        end 
+        else if (in_enable ==1'b0 ) 
+        begin 
+          if (counter32 > 6'd0) 
+              counter32 <= counter32 - 1; 
+         else  
+              counter32 <= 6'd0; 
+        end 
+  end    
+  
+  always @ (posedge clk) 
+   begin 
+   if (rst) 
+       begin 
+            out_valid <= 1'b0;
+       end 
+   else 
+        begin 
+          if (counter32 == 6'd12)  //powinnno to byæ 15 taktów od in_enable 
+              out_valid <= 1'b1; 
+          else if  (counter32 == 6'b000001)
+              out_valid <= 1'b0;
           else  
-              out_rdy <= out_rdy; 
+              out_valid <= out_valid; 
         end 
   end   
 /*****************************************************************************/ 
