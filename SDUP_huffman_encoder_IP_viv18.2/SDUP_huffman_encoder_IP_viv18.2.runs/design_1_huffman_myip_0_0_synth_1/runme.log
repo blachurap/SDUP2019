@@ -1,0 +1,1092 @@
+
+*** Running vivado
+    with args -log design_1_huffman_myip_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_huffman_myip_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_huffman_myip_0_0.tcl -notrace
+Command: synth_design -top design_1_huffman_myip_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11200 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 386.977 ; gain = 98.668
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_huffman_myip_0_0' [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_huffman_myip_0_0/synth/design_1_huffman_myip_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'huffman_myip_v1_0' [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/hdl/huffman_myip_v1_0.v:4]
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'huffman_encoder' [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:13]
+	Parameter length_0 bound to: 5'b00101 
+	Parameter length_1 bound to: 5'b00101 
+	Parameter length_2 bound to: 5'b00101 
+	Parameter length_3 bound to: 5'b00101 
+	Parameter length_4 bound to: 5'b00101 
+	Parameter length_5 bound to: 5'b00101 
+	Parameter length_6 bound to: 5'b00101 
+	Parameter length_7 bound to: 5'b00101 
+	Parameter length_8 bound to: 5'b00101 
+	Parameter length_9 bound to: 5'b00101 
+	Parameter length_10 bound to: 5'b00101 
+	Parameter length_11 bound to: 5'b00110 
+	Parameter length_12 bound to: 5'b00110 
+	Parameter length_13 bound to: 5'b00110 
+	Parameter length_14 bound to: 5'b00110 
+	Parameter length_15 bound to: 5'b00110 
+	Parameter length_16 bound to: 5'b00110 
+	Parameter length_17 bound to: 5'b00110 
+	Parameter length_18 bound to: 5'b00110 
+	Parameter length_19 bound to: 5'b00110 
+	Parameter length_20 bound to: 5'b00110 
+	Parameter length_21 bound to: 5'b00110 
+	Parameter length_22 bound to: 5'b00110 
+	Parameter length_23 bound to: 5'b00110 
+	Parameter length_24 bound to: 5'b00110 
+	Parameter length_25 bound to: 5'b00110 
+	Parameter length_26 bound to: 5'b00110 
+	Parameter length_27 bound to: 5'b00110 
+	Parameter length_28 bound to: 5'b00110 
+	Parameter length_29 bound to: 5'b00110 
+	Parameter length_30 bound to: 5'b00110 
+	Parameter length_31 bound to: 5'b00110 
+	Parameter length_32 bound to: 5'b00111 
+	Parameter length_33 bound to: 5'b00111 
+	Parameter length_34 bound to: 5'b00111 
+	Parameter length_35 bound to: 5'b00111 
+	Parameter length_36 bound to: 5'b00111 
+	Parameter length_37 bound to: 5'b00111 
+	Parameter length_38 bound to: 5'b00111 
+	Parameter length_39 bound to: 5'b00111 
+	Parameter length_40 bound to: 5'b00111 
+	Parameter length_41 bound to: 5'b00111 
+	Parameter length_42 bound to: 5'b00111 
+	Parameter length_43 bound to: 5'b00111 
+	Parameter length_44 bound to: 5'b00111 
+	Parameter length_45 bound to: 5'b00111 
+	Parameter length_46 bound to: 5'b00111 
+	Parameter length_47 bound to: 5'b00111 
+	Parameter length_48 bound to: 5'b00111 
+	Parameter length_49 bound to: 5'b00111 
+	Parameter length_50 bound to: 5'b00111 
+	Parameter length_51 bound to: 5'b00111 
+	Parameter length_52 bound to: 5'b00111 
+	Parameter length_53 bound to: 5'b01000 
+	Parameter length_54 bound to: 5'b01000 
+	Parameter length_55 bound to: 5'b01000 
+	Parameter length_56 bound to: 5'b01000 
+	Parameter length_57 bound to: 5'b01000 
+	Parameter length_58 bound to: 5'b01000 
+	Parameter length_59 bound to: 5'b01000 
+	Parameter length_60 bound to: 5'b01000 
+	Parameter length_61 bound to: 5'b01000 
+	Parameter length_62 bound to: 5'b01000 
+	Parameter length_63 bound to: 5'b01000 
+	Parameter length_64 bound to: 5'b01000 
+	Parameter length_65 bound to: 5'b01000 
+	Parameter length_66 bound to: 5'b01000 
+	Parameter length_67 bound to: 5'b01000 
+	Parameter length_68 bound to: 5'b01000 
+	Parameter length_69 bound to: 5'b01000 
+	Parameter length_70 bound to: 5'b01000 
+	Parameter length_71 bound to: 5'b01000 
+	Parameter length_72 bound to: 5'b01000 
+	Parameter length_73 bound to: 5'b01000 
+	Parameter length_74 bound to: 5'b01001 
+	Parameter length_75 bound to: 5'b01001 
+	Parameter length_76 bound to: 5'b01001 
+	Parameter length_77 bound to: 5'b01001 
+	Parameter length_78 bound to: 5'b01001 
+	Parameter length_79 bound to: 5'b01001 
+	Parameter length_80 bound to: 5'b01001 
+	Parameter length_81 bound to: 5'b01001 
+	Parameter length_82 bound to: 5'b01001 
+	Parameter length_83 bound to: 5'b01001 
+	Parameter length_84 bound to: 5'b01001 
+	Parameter length_85 bound to: 5'b01001 
+	Parameter length_86 bound to: 5'b01001 
+	Parameter length_87 bound to: 5'b01001 
+	Parameter length_88 bound to: 5'b01001 
+	Parameter length_89 bound to: 5'b01001 
+	Parameter length_90 bound to: 5'b01001 
+	Parameter length_91 bound to: 5'b01001 
+	Parameter length_92 bound to: 5'b01001 
+	Parameter length_93 bound to: 5'b01001 
+	Parameter length_94 bound to: 5'b01001 
+	Parameter length_95 bound to: 5'b01010 
+	Parameter length_96 bound to: 5'b01010 
+	Parameter length_97 bound to: 5'b01010 
+	Parameter length_98 bound to: 5'b01010 
+	Parameter length_99 bound to: 5'b01010 
+	Parameter length_100 bound to: 5'b01010 
+	Parameter length_101 bound to: 5'b01010 
+	Parameter length_102 bound to: 5'b01010 
+	Parameter length_103 bound to: 5'b01010 
+	Parameter length_104 bound to: 5'b01010 
+	Parameter length_105 bound to: 5'b01010 
+	Parameter length_106 bound to: 5'b01010 
+	Parameter length_107 bound to: 5'b01010 
+	Parameter length_108 bound to: 5'b01010 
+	Parameter length_109 bound to: 5'b01010 
+	Parameter length_110 bound to: 5'b01010 
+	Parameter length_111 bound to: 5'b01010 
+	Parameter length_112 bound to: 5'b01010 
+	Parameter length_113 bound to: 5'b01010 
+	Parameter length_114 bound to: 5'b01010 
+	Parameter length_115 bound to: 5'b01010 
+	Parameter length_116 bound to: 5'b01011 
+	Parameter length_117 bound to: 5'b01011 
+	Parameter length_118 bound to: 5'b01011 
+	Parameter length_119 bound to: 5'b01011 
+	Parameter length_120 bound to: 5'b01011 
+	Parameter length_121 bound to: 5'b01011 
+	Parameter length_122 bound to: 5'b01011 
+	Parameter length_123 bound to: 5'b01011 
+	Parameter length_124 bound to: 5'b01011 
+	Parameter length_125 bound to: 5'b01011 
+	Parameter length_126 bound to: 5'b01011 
+	Parameter length_127 bound to: 5'b01011 
+	Parameter length_128 bound to: 5'b01011 
+	Parameter length_129 bound to: 5'b01011 
+	Parameter length_130 bound to: 5'b01011 
+	Parameter length_131 bound to: 5'b01011 
+	Parameter length_132 bound to: 5'b01011 
+	Parameter length_133 bound to: 5'b01011 
+	Parameter length_134 bound to: 5'b01011 
+	Parameter length_135 bound to: 5'b01011 
+	Parameter length_136 bound to: 5'b01011 
+	Parameter length_137 bound to: 5'b01011 
+	Parameter length_138 bound to: 5'b01100 
+	Parameter length_139 bound to: 5'b01100 
+	Parameter length_140 bound to: 5'b01100 
+	Parameter length_141 bound to: 5'b01100 
+	Parameter length_142 bound to: 5'b01100 
+	Parameter length_143 bound to: 5'b01100 
+	Parameter length_144 bound to: 5'b01100 
+	Parameter length_145 bound to: 5'b01100 
+	Parameter length_146 bound to: 5'b01100 
+	Parameter length_147 bound to: 5'b01100 
+	Parameter length_148 bound to: 5'b01100 
+	Parameter length_149 bound to: 5'b01100 
+	Parameter length_150 bound to: 5'b01100 
+	Parameter length_151 bound to: 5'b01100 
+	Parameter length_152 bound to: 5'b01100 
+	Parameter length_153 bound to: 5'b01100 
+	Parameter length_154 bound to: 5'b01100 
+	Parameter length_155 bound to: 5'b01100 
+	Parameter length_156 bound to: 5'b01100 
+	Parameter length_157 bound to: 5'b01100 
+	Parameter length_158 bound to: 5'b01101 
+	Parameter length_159 bound to: 5'b01101 
+	Parameter length_160 bound to: 5'b01101 
+	Parameter length_161 bound to: 5'b01101 
+	Parameter length_162 bound to: 5'b01101 
+	Parameter length_163 bound to: 5'b01101 
+	Parameter length_164 bound to: 5'b01101 
+	Parameter length_165 bound to: 5'b01101 
+	Parameter length_166 bound to: 5'b01101 
+	Parameter length_167 bound to: 5'b01101 
+	Parameter length_168 bound to: 5'b01101 
+	Parameter length_169 bound to: 5'b01101 
+	Parameter length_170 bound to: 5'b01101 
+	Parameter length_171 bound to: 5'b01101 
+	Parameter length_172 bound to: 5'b01101 
+	Parameter length_173 bound to: 5'b01101 
+	Parameter length_174 bound to: 5'b01101 
+	Parameter length_175 bound to: 5'b01101 
+	Parameter length_176 bound to: 5'b01101 
+	Parameter length_177 bound to: 5'b01101 
+	Parameter length_178 bound to: 5'b01101 
+	Parameter length_179 bound to: 5'b01110 
+	Parameter length_180 bound to: 5'b01110 
+	Parameter length_181 bound to: 5'b01110 
+	Parameter length_182 bound to: 5'b01110 
+	Parameter length_183 bound to: 5'b01110 
+	Parameter length_184 bound to: 5'b01110 
+	Parameter length_185 bound to: 5'b01110 
+	Parameter length_186 bound to: 5'b01110 
+	Parameter length_187 bound to: 5'b01110 
+	Parameter length_188 bound to: 5'b01110 
+	Parameter length_189 bound to: 5'b01110 
+	Parameter length_190 bound to: 5'b01110 
+	Parameter length_191 bound to: 5'b01110 
+	Parameter length_192 bound to: 5'b01110 
+	Parameter length_193 bound to: 5'b01110 
+	Parameter length_194 bound to: 5'b01110 
+	Parameter length_195 bound to: 5'b01110 
+	Parameter length_196 bound to: 5'b01110 
+	Parameter length_197 bound to: 5'b01110 
+	Parameter length_198 bound to: 5'b01110 
+	Parameter length_199 bound to: 5'b01110 
+	Parameter length_200 bound to: 5'b01111 
+	Parameter length_201 bound to: 5'b01111 
+	Parameter length_202 bound to: 5'b01111 
+	Parameter length_203 bound to: 5'b01111 
+	Parameter length_204 bound to: 5'b01111 
+	Parameter length_205 bound to: 5'b01111 
+	Parameter length_206 bound to: 5'b01111 
+	Parameter length_207 bound to: 5'b01111 
+	Parameter length_208 bound to: 5'b01111 
+	Parameter length_209 bound to: 5'b01111 
+	Parameter length_210 bound to: 5'b01111 
+	Parameter length_211 bound to: 5'b01111 
+	Parameter length_212 bound to: 5'b01111 
+	Parameter length_213 bound to: 5'b01111 
+	Parameter length_214 bound to: 5'b01111 
+	Parameter length_215 bound to: 5'b01111 
+	Parameter length_216 bound to: 5'b01111 
+	Parameter length_217 bound to: 5'b01111 
+	Parameter length_218 bound to: 5'b01111 
+	Parameter length_219 bound to: 5'b01111 
+	Parameter length_220 bound to: 5'b10000 
+	Parameter length_221 bound to: 5'b10000 
+	Parameter length_222 bound to: 5'b10000 
+	Parameter length_223 bound to: 5'b10000 
+	Parameter length_224 bound to: 5'b10000 
+	Parameter length_225 bound to: 5'b10000 
+	Parameter length_226 bound to: 5'b10000 
+	Parameter length_227 bound to: 5'b10000 
+	Parameter length_228 bound to: 5'b10000 
+	Parameter length_229 bound to: 5'b10000 
+	Parameter length_230 bound to: 5'b10000 
+	Parameter length_231 bound to: 5'b10000 
+	Parameter length_232 bound to: 5'b10000 
+	Parameter length_233 bound to: 5'b10000 
+	Parameter length_234 bound to: 5'b10000 
+	Parameter length_235 bound to: 5'b10000 
+	Parameter length_236 bound to: 5'b10000 
+	Parameter length_237 bound to: 5'b10000 
+	Parameter length_238 bound to: 5'b10000 
+	Parameter length_239 bound to: 5'b10000 
+	Parameter length_240 bound to: 5'b10001 
+	Parameter length_241 bound to: 5'b10001 
+	Parameter length_242 bound to: 5'b10001 
+	Parameter length_243 bound to: 5'b10001 
+	Parameter length_244 bound to: 5'b10001 
+	Parameter length_245 bound to: 5'b10001 
+	Parameter length_246 bound to: 5'b10001 
+	Parameter length_247 bound to: 5'b10001 
+	Parameter length_248 bound to: 5'b10001 
+	Parameter length_249 bound to: 5'b10001 
+	Parameter length_250 bound to: 5'b10001 
+	Parameter length_251 bound to: 5'b10001 
+	Parameter length_252 bound to: 5'b10001 
+	Parameter length_253 bound to: 5'b10001 
+	Parameter length_254 bound to: 5'b10001 
+	Parameter length_255 bound to: 5'b10001 
+	Parameter symb_0 bound to: 5'b01010 
+	Parameter symb_1 bound to: 5'b01100 
+	Parameter symb_2 bound to: 5'b01110 
+	Parameter symb_3 bound to: 5'b10000 
+	Parameter symb_4 bound to: 5'b10010 
+	Parameter symb_5 bound to: 5'b10100 
+	Parameter symb_6 bound to: 5'b10110 
+	Parameter symb_7 bound to: 5'b11000 
+	Parameter symb_8 bound to: 5'b11010 
+	Parameter symb_9 bound to: 5'b11100 
+	Parameter symb_10 bound to: 5'b11110 
+	Parameter symb_11 bound to: 6'b000000 
+	Parameter symb_12 bound to: 6'b000010 
+	Parameter symb_13 bound to: 6'b000100 
+	Parameter symb_14 bound to: 6'b000110 
+	Parameter symb_15 bound to: 6'b001000 
+	Parameter symb_16 bound to: 6'b001010 
+	Parameter symb_17 bound to: 6'b001100 
+	Parameter symb_18 bound to: 6'b001110 
+	Parameter symb_19 bound to: 6'b010000 
+	Parameter symb_20 bound to: 6'b010010 
+	Parameter symb_21 bound to: 6'b010110 
+	Parameter symb_22 bound to: 6'b011010 
+	Parameter symb_23 bound to: 6'b011110 
+	Parameter symb_24 bound to: 6'b100010 
+	Parameter symb_25 bound to: 6'b100110 
+	Parameter symb_26 bound to: 6'b101010 
+	Parameter symb_27 bound to: 6'b101110 
+	Parameter symb_28 bound to: 6'b110010 
+	Parameter symb_29 bound to: 6'b110110 
+	Parameter symb_30 bound to: 6'b111010 
+	Parameter symb_31 bound to: 6'b111110 
+	Parameter symb_32 bound to: 7'b0000010 
+	Parameter symb_33 bound to: 7'b0000110 
+	Parameter symb_34 bound to: 7'b0001010 
+	Parameter symb_35 bound to: 7'b0001110 
+	Parameter symb_36 bound to: 7'b0010010 
+	Parameter symb_37 bound to: 7'b0010110 
+	Parameter symb_38 bound to: 7'b0011010 
+	Parameter symb_39 bound to: 7'b0011110 
+	Parameter symb_40 bound to: 7'b0100010 
+	Parameter symb_41 bound to: 7'b0100110 
+	Parameter symb_42 bound to: 7'b0101110 
+	Parameter symb_43 bound to: 7'b0110110 
+	Parameter symb_44 bound to: 7'b0111110 
+	Parameter symb_45 bound to: 7'b1000110 
+	Parameter symb_46 bound to: 7'b1001110 
+	Parameter symb_47 bound to: 7'b1010110 
+	Parameter symb_48 bound to: 7'b1011110 
+	Parameter symb_49 bound to: 7'b1100110 
+	Parameter symb_50 bound to: 7'b1101110 
+	Parameter symb_51 bound to: 7'b1110110 
+	Parameter symb_52 bound to: 7'b1111110 
+	Parameter symb_53 bound to: 8'b00000110 
+	Parameter symb_54 bound to: 8'b00001110 
+	Parameter symb_55 bound to: 8'b00010110 
+	Parameter symb_56 bound to: 8'b00011110 
+	Parameter symb_57 bound to: 8'b00100110 
+	Parameter symb_58 bound to: 8'b00101110 
+	Parameter symb_59 bound to: 8'b00110110 
+	Parameter symb_60 bound to: 8'b00111110 
+	Parameter symb_61 bound to: 8'b01000110 
+	Parameter symb_62 bound to: 8'b01001110 
+	Parameter symb_63 bound to: 8'b01011110 
+	Parameter symb_64 bound to: 8'b01101110 
+	Parameter symb_65 bound to: 8'b01111110 
+	Parameter symb_66 bound to: 8'b10001110 
+	Parameter symb_67 bound to: 8'b10011110 
+	Parameter symb_68 bound to: 8'b10101110 
+	Parameter symb_69 bound to: 8'b10111110 
+	Parameter symb_70 bound to: 8'b11001110 
+	Parameter symb_71 bound to: 8'b11011110 
+	Parameter symb_72 bound to: 8'b11101110 
+	Parameter symb_73 bound to: 8'b11111110 
+	Parameter symb_74 bound to: 9'b000001110 
+	Parameter symb_75 bound to: 9'b000011110 
+	Parameter symb_76 bound to: 9'b000101110 
+	Parameter symb_77 bound to: 9'b000111110 
+	Parameter symb_78 bound to: 9'b001001110 
+	Parameter symb_79 bound to: 9'b001011110 
+	Parameter symb_80 bound to: 9'b001101110 
+	Parameter symb_81 bound to: 9'b001111110 
+	Parameter symb_82 bound to: 9'b010001110 
+	Parameter symb_83 bound to: 9'b010011110 
+	Parameter symb_84 bound to: 9'b010111110 
+	Parameter symb_85 bound to: 9'b011011110 
+	Parameter symb_86 bound to: 9'b011111110 
+	Parameter symb_87 bound to: 9'b100011110 
+	Parameter symb_88 bound to: 9'b100111110 
+	Parameter symb_89 bound to: 9'b101011110 
+	Parameter symb_90 bound to: 9'b101111110 
+	Parameter symb_91 bound to: 9'b110011110 
+	Parameter symb_92 bound to: 9'b110111110 
+	Parameter symb_93 bound to: 9'b111011110 
+	Parameter symb_94 bound to: 9'b111111110 
+	Parameter symb_95 bound to: 10'b0000011110 
+	Parameter symb_96 bound to: 10'b0000111110 
+	Parameter symb_97 bound to: 10'b0001011110 
+	Parameter symb_98 bound to: 10'b0001111110 
+	Parameter symb_99 bound to: 10'b0010011110 
+	Parameter symb_100 bound to: 10'b0010111110 
+	Parameter symb_101 bound to: 10'b0011011110 
+	Parameter symb_102 bound to: 10'b0011111110 
+	Parameter symb_103 bound to: 10'b0100011110 
+	Parameter symb_104 bound to: 10'b0100111110 
+	Parameter symb_105 bound to: 10'b0101111110 
+	Parameter symb_106 bound to: 10'b0110111110 
+	Parameter symb_107 bound to: 10'b0111111110 
+	Parameter symb_108 bound to: 10'b1000111110 
+	Parameter symb_109 bound to: 10'b1001111110 
+	Parameter symb_110 bound to: 10'b1010111110 
+	Parameter symb_111 bound to: 10'b1011111110 
+	Parameter symb_112 bound to: 10'b1100111110 
+	Parameter symb_113 bound to: 10'b1101111110 
+	Parameter symb_114 bound to: 10'b1110111110 
+	Parameter symb_115 bound to: 10'b1111111110 
+	Parameter symb_116 bound to: 11'b00000111110 
+	Parameter symb_117 bound to: 11'b00001111110 
+	Parameter symb_118 bound to: 11'b00010111110 
+	Parameter symb_119 bound to: 11'b00011111110 
+	Parameter symb_120 bound to: 11'b00100111110 
+	Parameter symb_121 bound to: 11'b00101111110 
+	Parameter symb_122 bound to: 11'b00110111110 
+	Parameter symb_123 bound to: 11'b00111111110 
+	Parameter symb_124 bound to: 11'b01000111110 
+	Parameter symb_125 bound to: 11'b01001111110 
+	Parameter symb_126 bound to: 11'b01011111110 
+	Parameter symb_127 bound to: 11'b01101111110 
+	Parameter symb_128 bound to: 11'b01101111111 
+	Parameter symb_129 bound to: 11'b01111111111 
+	Parameter symb_130 bound to: 11'b10001111111 
+	Parameter symb_131 bound to: 11'b10011111111 
+	Parameter symb_132 bound to: 11'b10101111111 
+	Parameter symb_133 bound to: 11'b10111111111 
+	Parameter symb_134 bound to: 11'b11001111111 
+	Parameter symb_135 bound to: 11'b11011111111 
+	Parameter symb_136 bound to: 11'b11101111111 
+	Parameter symb_137 bound to: 11'b11111111111 
+	Parameter symb_138 bound to: 12'b000001111111 
+	Parameter symb_139 bound to: 12'b000011111111 
+	Parameter symb_140 bound to: 12'b000101111111 
+	Parameter symb_141 bound to: 12'b000111111111 
+	Parameter symb_142 bound to: 12'b001001111111 
+	Parameter symb_143 bound to: 12'b001011111111 
+	Parameter symb_144 bound to: 12'b001101111111 
+	Parameter symb_145 bound to: 12'b001111111111 
+	Parameter symb_146 bound to: 12'b010001111111 
+	Parameter symb_147 bound to: 12'b010011111111 
+	Parameter symb_148 bound to: 12'b010111111111 
+	Parameter symb_149 bound to: 12'b011111111101 
+	Parameter symb_150 bound to: 12'b100011111101 
+	Parameter symb_151 bound to: 12'b100111111101 
+	Parameter symb_152 bound to: 12'b101011111101 
+	Parameter symb_153 bound to: 12'b101111111101 
+	Parameter symb_154 bound to: 12'b110011111101 
+	Parameter symb_155 bound to: 12'b110111111101 
+	Parameter symb_156 bound to: 12'b111011111101 
+	Parameter symb_157 bound to: 12'b111111111100 
+	Parameter symb_158 bound to: 13'b0000011111100 
+	Parameter symb_159 bound to: 13'b0000111111100 
+	Parameter symb_160 bound to: 13'b0001011111100 
+	Parameter symb_161 bound to: 13'b0001111111100 
+	Parameter symb_162 bound to: 13'b0010011111100 
+	Parameter symb_163 bound to: 13'b0010111111100 
+	Parameter symb_164 bound to: 13'b0011011111100 
+	Parameter symb_165 bound to: 13'b0011111111100 
+	Parameter symb_166 bound to: 13'b0100011111100 
+	Parameter symb_167 bound to: 13'b0100111111100 
+	Parameter symb_168 bound to: 13'b0101111111100 
+	Parameter symb_169 bound to: 13'b0111111111000 
+	Parameter symb_170 bound to: 13'b1000111111000 
+	Parameter symb_171 bound to: 13'b1001111111000 
+	Parameter symb_172 bound to: 13'b1010111111000 
+	Parameter symb_173 bound to: 13'b1010111111001 
+	Parameter symb_174 bound to: 13'b1011111111001 
+	Parameter symb_175 bound to: 13'b1100111111001 
+	Parameter symb_176 bound to: 13'b1101111111001 
+	Parameter symb_177 bound to: 13'b1110111111001 
+	Parameter symb_178 bound to: 13'b1111111111011 
+	Parameter symb_179 bound to: 14'b00000111111011 
+	Parameter symb_180 bound to: 14'b00001111111011 
+	Parameter symb_181 bound to: 14'b00010111111010 
+	Parameter symb_182 bound to: 14'b00011111111010 
+	Parameter symb_183 bound to: 14'b00100111111010 
+	Parameter symb_184 bound to: 14'b00101111111010 
+	Parameter symb_185 bound to: 14'b00110111111010 
+	Parameter symb_186 bound to: 14'b00111111111010 
+	Parameter symb_187 bound to: 14'b01000111111010 
+	Parameter symb_188 bound to: 14'b01001111111010 
+	Parameter symb_189 bound to: 14'b01001111111011 
+	Parameter symb_190 bound to: 14'b01011111111011 
+	Parameter symb_191 bound to: 14'b01111111110011 
+	Parameter symb_192 bound to: 14'b10001111110011 
+	Parameter symb_193 bound to: 14'b10011111110011 
+	Parameter symb_194 bound to: 14'b10111111110001 
+	Parameter symb_195 bound to: 14'b11001111110000 
+	Parameter symb_196 bound to: 14'b11011111110000 
+	Parameter symb_197 bound to: 14'b11101111110000 
+	Parameter symb_198 bound to: 14'b11111111110100 
+	Parameter symb_199 bound to: 14'b11111111110101 
+	Parameter symb_200 bound to: 15'b000001111110101 
+	Parameter symb_201 bound to: 15'b000011111110101 
+	Parameter symb_202 bound to: 15'b000101111110111 
+	Parameter symb_203 bound to: 15'b000111111110110 
+	Parameter symb_204 bound to: 15'b001001111110110 
+	Parameter symb_205 bound to: 15'b001011111110110 
+	Parameter symb_206 bound to: 15'b001101111110110 
+	Parameter symb_207 bound to: 15'b001101111110111 
+	Parameter symb_208 bound to: 15'b001111111110111 
+	Parameter symb_209 bound to: 15'b010001111110111 
+	Parameter symb_210 bound to: 15'b010111111110101 
+	Parameter symb_211 bound to: 15'b011111111100100 
+	Parameter symb_212 bound to: 15'b100011111100100 
+	Parameter symb_213 bound to: 15'b100111111100100 
+	Parameter symb_214 bound to: 15'b101111111100000 
+	Parameter symb_215 bound to: 15'b101111111100001 
+	Parameter symb_216 bound to: 15'b110011111100011 
+	Parameter symb_217 bound to: 15'b110111111100010 
+	Parameter symb_218 bound to: 15'b111011111100010 
+	Parameter symb_219 bound to: 15'b111011111100011 
+	Parameter symb_220 bound to: 16'b0000011111101001 
+	Parameter symb_221 bound to: 16'b0000111111101000 
+	Parameter symb_222 bound to: 16'b0001011111101100 
+	Parameter symb_223 bound to: 16'b0001011111101101 
+	Parameter symb_224 bound to: 16'b0001111111101111 
+	Parameter symb_225 bound to: 16'b0010011111101110 
+	Parameter symb_226 bound to: 16'b0010111111101110 
+	Parameter symb_227 bound to: 16'b0010111111101111 
+	Parameter symb_228 bound to: 16'b0011111111101101 
+	Parameter symb_229 bound to: 16'b0100011111101100 
+	Parameter symb_230 bound to: 16'b0101111111101000 
+	Parameter symb_231 bound to: 16'b0101111111101001 
+	Parameter symb_232 bound to: 16'b0111111111001011 
+	Parameter symb_233 bound to: 16'b1000111111001010 
+	Parameter symb_234 bound to: 16'b1001111111001010 
+	Parameter symb_235 bound to: 16'b1001111111001011 
+	Parameter symb_236 bound to: 16'b1100111111000100 
+	Parameter symb_237 bound to: 16'b1100111111000101 
+	Parameter symb_238 bound to: 16'b1101111111000110 
+	Parameter symb_239 bound to: 16'b1101111111000111 
+	Parameter symb_240 bound to: 17'b00000111111010000 
+	Parameter symb_241 bound to: 17'b00000111111010001 
+	Parameter symb_242 bound to: 17'b00001111111010010 
+	Parameter symb_243 bound to: 17'b00001111111010011 
+	Parameter symb_244 bound to: 17'b00011111111011100 
+	Parameter symb_245 bound to: 17'b00011111111011101 
+	Parameter symb_246 bound to: 17'b00100111111011110 
+	Parameter symb_247 bound to: 17'b00100111111011111 
+	Parameter symb_248 bound to: 17'b00111111111011000 
+	Parameter symb_249 bound to: 17'b00111111111011001 
+	Parameter symb_250 bound to: 17'b01000111111011010 
+	Parameter symb_251 bound to: 17'b01000111111011011 
+	Parameter symb_252 bound to: 17'b01111111110010100 
+	Parameter symb_253 bound to: 17'b01111111110010101 
+	Parameter symb_254 bound to: 17'b10001111110010110 
+	Parameter symb_255 bound to: 17'b10001111110010111 
+INFO: [Synth 8-226] default block is never used [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:573]
+WARNING: [Synth 8-6014] Unused sequential element data_out5_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:847]
+INFO: [Synth 8-6155] done synthesizing module 'huffman_encoder' (1#1) [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:13]
+WARNING: [Synth 8-3848] Net m00_axis_tstrb in module/entity huffman_myip_v1_0 does not have driver. [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/hdl/huffman_myip_v1_0.v:40]
+WARNING: [Synth 8-3848] Net m00_axis_tlast in module/entity huffman_myip_v1_0 does not have driver. [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/hdl/huffman_myip_v1_0.v:41]
+INFO: [Synth 8-6155] done synthesizing module 'huffman_myip_v1_0' (2#1) [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/hdl/huffman_myip_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_huffman_myip_0_0' (3#1) [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_huffman_myip_0_0/synth/design_1_huffman_myip_0_0.v:57]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[31]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[30]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[29]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[28]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[27]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[26]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[25]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[24]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[23]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[22]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[21]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[20]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[19]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[18]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[17]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tdata[16]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tstrb[0]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_tlast
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[31]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[30]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[29]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[28]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[27]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[26]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[25]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[24]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[23]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[22]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[21]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[20]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[19]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[18]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[17]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[16]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[15]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[14]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[13]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[12]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[11]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[10]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[9]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tdata[8]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tstrb[0]
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port s00_axis_tlast
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_aclk
+WARNING: [Synth 8-3331] design huffman_myip_v1_0 has unconnected port m00_axis_aresetn
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 442.059 ; gain = 153.750
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 442.059 ; gain = 153.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 442.059 ; gain = 153.750
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraint will be written out.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 792.875 ; gain = 2.258
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 792.875 ; gain = 504.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 792.875 ; gain = 504.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 792.875 ; gain = 504.566
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "cl_sum_rdy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "out_valid" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "in_ready" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element data_out1_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:568]
+WARNING: [Synth 8-6014] Unused sequential element codelength_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:569]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 792.875 ; gain = 504.566
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
+	   3 Input      6 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               34 Bit    Registers := 4     
+	               17 Bit    Registers := 4     
+	               16 Bit    Registers := 7     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 17    
++---Multipliers : 
+	                17x34  Multipliers := 1     
++---ROMs : 
+	                              ROMs := 2     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 5     
+	   3 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module huffman_encoder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
+	   3 Input      6 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               34 Bit    Registers := 4     
+	               17 Bit    Registers := 4     
+	               16 Bit    Registers := 7     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 17    
++---Multipliers : 
+	                17x34  Multipliers := 1     
++---ROMs : 
+	                              ROMs := 2     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 5     
+	   3 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "inst/huffman_encoder_inst/cl_sum_rdy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst/huffman_encoder_inst/in_ready" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/codelength_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:569]
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/data_out1_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:568]
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/mult_out_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:977]
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/mult_out2_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:978]
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/mult_out3_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:979]
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/mult_out_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:977]
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/mult_out2_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:978]
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/mult_out_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:977]
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/mult_out2_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:978]
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/mult_out2_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:978]
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/mult_out_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:977]
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/cl_sum_shift_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:925]
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/data_out4_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:846]
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/mult_out_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:977]
+WARNING: [Synth 8-6014] Unused sequential element inst/huffman_encoder_inst/mult_out_reg was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:977]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:977]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:977]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:977]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:978]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:978]
+WARNING: [Synth 8-6014] Unused sequential element  was removed. 
+DSP Report: Generating DSP inst/huffman_encoder_inst/mult_out2_reg, operation Mode is: (A''*B2)'.
+DSP Report: register B is absorbed into DSP inst/huffman_encoder_inst/mult_out2_reg.
+DSP Report: register A is absorbed into DSP inst/huffman_encoder_inst/mult_out2_reg.
+DSP Report: register A is absorbed into DSP inst/huffman_encoder_inst/mult_out2_reg.
+DSP Report: register inst/huffman_encoder_inst/mult_out2_reg is absorbed into DSP inst/huffman_encoder_inst/mult_out2_reg.
+DSP Report: register inst/huffman_encoder_inst/mult_out_reg is absorbed into DSP inst/huffman_encoder_inst/mult_out2_reg.
+DSP Report: operator inst/huffman_encoder_inst/mult_out0 is absorbed into DSP inst/huffman_encoder_inst/mult_out2_reg.
+DSP Report: operator inst/huffman_encoder_inst/mult_out0 is absorbed into DSP inst/huffman_encoder_inst/mult_out2_reg.
+DSP Report: Generating DSP inst/huffman_encoder_inst/mult_out3_reg, operation Mode is: (PCIN>>17)+(A''*B'')'.
+DSP Report: register B is absorbed into DSP inst/huffman_encoder_inst/mult_out3_reg.
+DSP Report: register inst/huffman_encoder_inst/mult_out_reg is absorbed into DSP inst/huffman_encoder_inst/mult_out3_reg.
+DSP Report: register A is absorbed into DSP inst/huffman_encoder_inst/mult_out3_reg.
+DSP Report: register A is absorbed into DSP inst/huffman_encoder_inst/mult_out3_reg.
+DSP Report: register inst/huffman_encoder_inst/mult_out3_reg is absorbed into DSP inst/huffman_encoder_inst/mult_out3_reg.
+DSP Report: register inst/huffman_encoder_inst/mult_out2_reg is absorbed into DSP inst/huffman_encoder_inst/mult_out3_reg.
+DSP Report: operator inst/huffman_encoder_inst/mult_out0 is absorbed into DSP inst/huffman_encoder_inst/mult_out3_reg.
+DSP Report: operator inst/huffman_encoder_inst/mult_out0 is absorbed into DSP inst/huffman_encoder_inst/mult_out3_reg.
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[31]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[30]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[29]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[28]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[27]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[26]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[25]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[24]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[23]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[22]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[21]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[20]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[19]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[18]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[17]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tdata[16]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tstrb[0]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port m00_axis_tlast
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[31]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[30]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[29]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[28]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[27]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[26]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[25]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[24]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[23]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[22]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[21]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[20]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[19]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[18]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[17]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[16]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[15]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[14]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[13]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[12]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[11]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[10]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[9]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tdata[8]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design design_1_huffman_myip_0_0 has unconnected port s00_axis_tstrb[1]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'inst/huffman_encoder_inst/lower_reg1_reg[0]' (FDRE) to 'inst/huffman_encoder_inst/lower_reg1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/huffman_encoder_inst/lower_reg1_reg[1]' (FDRE) to 'inst/huffman_encoder_inst/lower_reg1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/huffman_encoder_inst/lower_reg1_reg[2]' (FDRE) to 'inst/huffman_encoder_inst/lower_reg1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/huffman_encoder_inst/lower_reg1_reg[3]' (FDRE) to 'inst/huffman_encoder_inst/lower_reg1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/huffman_encoder_inst/lower_reg1_reg[4]' (FDRE) to 'inst/huffman_encoder_inst/lower_reg1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/huffman_encoder_inst/lower_reg1_reg[5]' (FDRE) to 'inst/huffman_encoder_inst/lower_reg1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/huffman_encoder_inst/lower_reg1_reg[6]' (FDRE) to 'inst/huffman_encoder_inst/lower_reg1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/huffman_encoder_inst/lower_reg1_reg[7]' (FDRE) to 'inst/huffman_encoder_inst/lower_reg1_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/huffman_encoder_inst/lower_reg1_reg[8]' (FDRE) to 'inst/huffman_encoder_inst/lower_reg1_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/huffman_encoder_inst/lower_reg1_reg[9]' (FDRE) to 'inst/huffman_encoder_inst/lower_reg1_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/huffman_encoder_inst/lower_reg1_reg[10]' (FDRE) to 'inst/huffman_encoder_inst/lower_reg1_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/huffman_encoder_inst/lower_reg1_reg[11]' (FDRE) to 'inst/huffman_encoder_inst/lower_reg1_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/huffman_encoder_inst/lower_reg1_reg[12]' (FDRE) to 'inst/huffman_encoder_inst/lower_reg1_reg[13]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/huffman_encoder_inst/lower_reg1_reg[13] )
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/in_ready_reg) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/in_ready_reg__0) is unused and will be removed from module design_1_huffman_myip_0_0.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'inst/huffman_encoder_inst/in_ready_reg__0/Q' [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:1109]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:1109]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/3cce/src/huffman_encoder.v:1109]
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[47]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[46]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[45]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[44]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[43]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[42]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[41]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[40]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[39]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[38]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[37]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[36]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[35]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[34]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[33]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[32]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[31]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[30]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[29]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[28]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[27]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[26]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[25]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[24]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[23]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[22]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[21]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[20]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[19]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[18]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/mult_out3_reg[17]) is unused and will be removed from module design_1_huffman_myip_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/huffman_encoder_inst/lower_reg1_reg[13]) is unused and will be removed from module design_1_huffman_myip_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 792.875 ; gain = 504.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++--------------------------+------------------------------------------+---------------+----------------+
+|Module Name               | RTL Object                               | Depth x Width | Implemented As | 
++--------------------------+------------------------------------------+---------------+----------------+
+|huffman_encoder           | codelength_reg                           | 256x5         | Block RAM      | 
+|huffman_encoder           | data_out1_reg                            | 256x17        | Block RAM      | 
+|design_1_huffman_myip_0_0 | inst/huffman_encoder_inst/codelength_reg | 256x5         | Block RAM      | 
+|design_1_huffman_myip_0_0 | inst/huffman_encoder_inst/data_out1_reg  | 256x17        | Block RAM      | 
++--------------------------+------------------------------------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++--------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name               | DSP Mapping           | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|design_1_huffman_myip_0_0 | (A''*B2)'             | 18     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|design_1_huffman_myip_0_0 | (PCIN>>17)+(A''*B'')' | 18     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
++--------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance huffman_encoder_insti_0/inst/huffman_encoder_inst/codelength_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance huffman_encoder_insti_5/inst/huffman_encoder_inst/data_out1_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 834.488 ; gain = 546.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 834.785 ; gain = 546.477
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/huffman_encoder_inst/codelength_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 854.777 ; gain = 566.469
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 854.777 ; gain = 566.469
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 854.777 ; gain = 566.469
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 854.777 ; gain = 566.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 854.777 ; gain = 566.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 854.777 ; gain = 566.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 854.777 ; gain = 566.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name               | RTL Name                                 | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|design_1_huffman_myip_0_0 | inst/huffman_encoder_inst/half_flag6_reg | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|design_1_huffman_myip_0_0 | inst/huffman_encoder_inst/full_flag6_reg | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++--------------------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |     2|
+|2     |DSP48E1    |     1|
+|3     |DSP48E1_1  |     1|
+|4     |LUT2       |    16|
+|5     |LUT3       |    25|
+|6     |LUT4       |     9|
+|7     |LUT5       |    21|
+|8     |LUT6       |    55|
+|9     |RAMB18E1   |     1|
+|10    |RAMB18E1_2 |     1|
+|11    |SRL16E     |     2|
+|12    |FDRE       |   152|
+|13    |FDSE       |     3|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-------------------------+------------------+------+
+|      |Instance                 |Module            |Cells |
++------+-------------------------+------------------+------+
+|1     |top                      |                  |   289|
+|2     |  inst                   |huffman_myip_v1_0 |   289|
+|3     |    huffman_encoder_inst |huffman_encoder   |   289|
++------+-------------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 854.777 ; gain = 566.469
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3 critical warnings and 75 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 854.777 ; gain = 215.652
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 854.777 ; gain = 566.469
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+75 Infos, 127 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 854.777 ; gain = 573.965
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.runs/design_1_huffman_myip_0_0_synth_1/design_1_huffman_myip_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_huffman_myip_0_0/design_1_huffman_myip_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.runs/design_1_huffman_myip_0_0_synth_1/design_1_huffman_myip_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_huffman_myip_0_0_utilization_synth.rpt -pb design_1_huffman_myip_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 854.777 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Aug 31 18:08:57 2019...
