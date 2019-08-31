@@ -1,0 +1,172 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Aug 31 16:49:37 2019
+# Process ID: 5668
+# Current directory: C:/SDUP_huffman_encoder_IP_viv18.2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1404 C:\SDUP_huffman_encoder_IP_viv18.2\SDUP_huffman_encoder_IP_viv18.2.xpr
+# Log file: C:/SDUP_huffman_encoder_IP_viv18.2/vivado.log
+# Journal file: C:/SDUP_huffman_encoder_IP_viv18.2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ip_repo/huffman_myip_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ip_repo/huffman_encoder_myip_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/ip_repo/huffman_myip_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ip_repo/huffman_myip_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 852.352 ; gain = 128.406
+update_compile_order -fileset sources_1
+open_bd_design {C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding cell -- xilinx.com:ip:axi_fifo_mm_s:4.1 - axi_fifo_mm_s_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_1> from BD file <C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 975.672 ; gain = 100.750
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_intf_nets axi_fifo_mm_s_0_AXI_STR_TXD] [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_cells axi_fifo_mm_s_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:huffman_myip:1.0 huffman_myip_0
+endgroup
+connect_bd_intf_net [get_bd_intf_pins huffman_myip_0/M00_AXIS] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+connect_bd_intf_net [get_bd_intf_pins huffman_myip_0/S00_AXIS] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins huffman_myip_0/s00_axis_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins huffman_myip_0/m00_axis_aclk]
+endgroup
+regenerate_bd_layout
+validate_bd_design
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+xit::source_ipfile: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1087.551 ; gain = 66.887
+validate_bd_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 1092.934 ; gain = 91.219
+save_bd_design
+Wrote  : <C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run design_1_xbar_0_synth_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+Exporting to file c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/hw_handoff/design_1_axi_smc_1.hwh
+Generated Block Design Tcl file c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/hw_handoff/design_1_axi_smc_1_bd.tcl
+Generated Hardware Definition File c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/synth/design_1_axi_smc_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block huffman_myip_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 6324809b45ccd9e3; cache size = 44.777 MB.
+[Sat Aug 31 17:08:16 2019] Launched design_1_xbar_0_synth_1, design_1_huffman_myip_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_xbar_0_synth_1: C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.runs/design_1_xbar_0_synth_1/runme.log
+design_1_huffman_myip_0_0_synth_1: C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.runs/design_1_huffman_myip_0_0_synth_1/runme.log
+synth_1: C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.runs/synth_1/runme.log
+[Sat Aug 31 17:08:16 2019] Launched impl_1...
+Run output will be captured here: C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1302.301 ; gain = 193.453
+ipx::edit_ip_in_project -upgrade true -name huffman_myip_v1_0_project -directory C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.tmp/huffman_myip_v1_0_project c:/ip_repo/huffman_myip_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/sdup_huffman_encoder_ip_viv18.2/sdup_huffman_encoder_ip_viv18.2.tmp/huffman_myip_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1304.504 ; gain = 2.203
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ip_repo/huffman_myip_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ip_repo/huffman_encoder_myip_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/ip_repo/huffman_myip_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ip_repo/huffman_myip_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1313.227 ; gain = 10.926
+update_compile_order -fileset sources_1
+ipx::merge_project_changes ports [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/ip_repo/huffman_myip_1.0/component.xml' ignored by IP packager.
+set_property core_revision 6 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/ip_repo/huffman_myip_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/ip_repo/huffman_myip_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:huffman_myip:1.0 [get_ips  design_1_huffman_myip_0_0] -log ip_upgrade.log
+Upgrading 'C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_huffman_myip_0_0 (huffman_myip_v1.0 1.0) from revision 5 to revision 6
+Wrote  : <C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/SDUP_huffman_encoder_IP_viv18.2/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_huffman_myip_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+xit::source_ipfile: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1325.773 ; gain = 0.000
+Wrote  : <C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+Exporting to file c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/hw_handoff/design_1_axi_smc_1.hwh
+Generated Block Design Tcl file c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/hw_handoff/design_1_axi_smc_1_bd.tcl
+Generated Hardware Definition File c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/synth/design_1_axi_smc_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block huffman_myip_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1432.445 ; gain = 106.672
+catch { config_ip_cache -export [get_ips -all design_1_huffman_myip_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 6324809b45ccd9e3; cache size = 45.673 MB.
+export_ip_user_files -of_objects [get_files C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 2 design_1_huffman_myip_0_0_synth_1
+[Sat Aug 31 18:07:50 2019] Launched design_1_huffman_myip_0_0_synth_1...
+Run output will be captured here: C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.runs/design_1_huffman_myip_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.ip_user_files/sim_scripts -ip_user_files_dir C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.ip_user_files -ipstatic_source_dir C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.cache/compile_simlib/modelsim} {questa=C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.cache/compile_simlib/questa} {riviera=C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.cache/compile_simlib/riviera} {activehdl=C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.runs/synth_1
+
+launch_runs impl_1 -jobs 2
+[Sat Aug 31 18:08:48 2019] Launched design_1_huffman_myip_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_huffman_myip_0_0_synth_1: C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.runs/design_1_huffman_myip_0_0_synth_1/runme.log
+synth_1: C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.runs/synth_1/runme.log
+[Sat Aug 31 18:08:48 2019] Launched impl_1...
+Run output will be captured here: C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.runs/impl_1/runme.log
+startgroup
+set_property -dict [list CONFIG.NUM_MI {1}] [get_bd_cells ps7_0_axi_periph]
+endgroup
+regenerate_bd_layout
+validate_bd_design
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+validate_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1574.953 ; gain = 3.039
+save_bd_design
+Wrote  : <C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Aug 31 18:17:20 2019...
