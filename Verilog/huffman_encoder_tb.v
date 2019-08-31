@@ -15,6 +15,7 @@ reg in_enable;
 reg [7:0] data_in;
 wire [15:0] data_out;
 wire out_valid;
+wire in_ready;
 
 initial
 begin
@@ -52,7 +53,8 @@ huffman_encoder UUT(
             .in_enable(in_enable),
             .data_in(data_in),
             .out_valid(out_valid),
-            .data_out(data_out)            
+            .data_out(data_out),
+            .in_ready(in_ready)
             );
             
 endmodule
