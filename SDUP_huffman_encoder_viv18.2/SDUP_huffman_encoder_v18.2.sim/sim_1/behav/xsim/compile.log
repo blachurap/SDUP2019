@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/WSN01/Documents/Michal Grzegorzek/trunk/Verilog/huffman_encoder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module huffman_encoder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/WSN01/Documents/Michal Grzegorzek/trunk/Verilog/huffman_encoder_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module huffman_encoder_tb

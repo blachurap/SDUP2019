@@ -1,9 +1,0 @@
-0.6
-2018.2
-Jun 14 2018
-20:41:02
-C:/Users/WSN01/Documents/Michal Grzegorzek/trunk/SDUP_huffman_encoder_viv18.2/SDUP_huffman_encoder_v18.2.sim/sim_1/behav/xsim/glbl.v,1562670863,verilog,,,,glbl,,,,,,,,
-C:/Users/WSN01/Documents/Michal Grzegorzek/trunk/Verilog/codelength.v,1562670864,verilog,,,,,,,,,,,,
-C:/Users/WSN01/Documents/Michal Grzegorzek/trunk/Verilog/dictionary.v,1562670864,verilog,,,,,,,,,,,,
-C:/Users/WSN01/Documents/Michal Grzegorzek/trunk/Verilog/huffman_encoder.v,1562672325,verilog,,C:/Users/WSN01/Documents/Michal Grzegorzek/trunk/Verilog/huffman_encoder_tb.v,C:/Users/WSN01/Documents/Michal Grzegorzek/trunk/Verilog/codelength.v;C:/Users/WSN01/Documents/Michal Grzegorzek/trunk/Verilog/dictionary.v,huffman_encoder,,,,,,,,
-C:/Users/WSN01/Documents/Michal Grzegorzek/trunk/Verilog/huffman_encoder_tb.v,1562670864,verilog,,,,huffman_encoder_tb,,,,,,,,
