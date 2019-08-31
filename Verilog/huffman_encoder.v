@@ -2,7 +2,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 /*********************************************************************************
 *   huffman_encoder.v
-*   Modu³ enkodera Huffmana korzystaj¹cy ze statycznego drzewa kodowego
+*   ModuÂ³ enkodera Huffmana korzystajÂ¹cy ze statycznego drzewa kodowego
 *
 *   ver. 0.1
 *   Tested: no
@@ -16,6 +16,7 @@ module huffman_encoder(
     input rst,
     input [7:0] data_in,
     input enable, in_enable,
+    output reg in_ready,
     output reg out_valid,
     output reg [15:0] data_out);
     /* signals */ 
@@ -605,15 +606,22 @@ always @ (posedge clk )
    if (rst) 
        begin 
             out_valid <= 1'b0;
+	    in_ready <= 1'b0;
        end 
    else 
         begin 
-          if (counter32 == 6'd12)  //powinnno to by� 15 takt�w od in_enable 
+          if (counter32 == 6'd12)  //powinnno to byæ 15 taktów od in_enable 
               out_valid <= 1'b1; 
           else if  (counter32 == 6'b000001)
               out_valid <= 1'b0;
           else  
               out_valid <= out_valid; 
+	 if (counter64 == 7'd5)
+            in_ready <= 1'b1;
+          else if (counter64 == 7'b0000000)
+            in_ready <= 1'b0; 
+          else
+            in_ready <= in_ready;
         end 
   end   
 /*****************************************************************************/ 
