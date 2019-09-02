@@ -160,24 +160,18 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_axi_smc_1/sim/design_1_axi_smc_1.v" \
+  "../../../bd/design_1/ipshared/f39d/src/huffman_encoder.v" \
+  "../../../bd/design_1/ipshared/f39d/hdl/huffman_myip_v1_0.v" \
+  "../../../bd/design_1/ip/design_1_huffman_myip_0_0/sim/design_1_huffman_myip_0_0.v" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \
   "../../../../SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 -endlib
--makelib ies_lib/axi_register_slice_v2_1_17 \
-  "../../../../SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v" \
--endlib
 -makelib ies_lib/axi_data_fifo_v2_1_16 \
   "../../../../SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/247d/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 -endlib
--makelib ies_lib/axi_crossbar_v2_1_18 \
-  "../../../../SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
-  "../../../bd/design_1/ipshared/3cce/src/huffman_encoder.v" \
-  "../../../bd/design_1/ipshared/3cce/hdl/huffman_myip_v1_0.v" \
-  "../../../bd/design_1/ip/design_1_huffman_myip_0_0/sim/design_1_huffman_myip_0_0.v" \
+-makelib ies_lib/axi_register_slice_v2_1_17 \
+  "../../../../SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_17 \
   "../../../../SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

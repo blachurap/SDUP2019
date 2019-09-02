@@ -34,9 +34,8 @@ sv xil_defaultlib --include "../../../../SDUP_huffman_encoder_IP_viv18.2.srcs/so
 verilog xil_defaultlib --include "../../../../SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/5bb9/hdl/verilog" --include "../../../../SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/70fd/hdl" --include "../../../../SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ipshared/f90c/hdl/verilog" \
 "../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_0/sim/bd_6f02_one_0.v" \
 "../../../bd/design_1/ip/design_1_axi_smc_1/sim/design_1_axi_smc_1.v" \
-"../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
-"../../../bd/design_1/ipshared/3cce/src/huffman_encoder.v" \
-"../../../bd/design_1/ipshared/3cce/hdl/huffman_myip_v1_0.v" \
+"../../../bd/design_1/ipshared/f39d/src/huffman_encoder.v" \
+"../../../bd/design_1/ipshared/f39d/hdl/huffman_myip_v1_0.v" \
 "../../../bd/design_1/ip/design_1_huffman_myip_0_0/sim/design_1_huffman_myip_0_0.v" \
 "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
 

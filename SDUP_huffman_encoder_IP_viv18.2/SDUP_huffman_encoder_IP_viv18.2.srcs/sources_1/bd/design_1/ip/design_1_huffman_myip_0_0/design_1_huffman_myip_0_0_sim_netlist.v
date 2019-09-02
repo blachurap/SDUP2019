@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sat Aug 31 18:08:57 2019
+// Date        : Mon Sep  2 09:59:02 2019
 // Host        : Michael-laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_huffman_myip_0_0/design_1_huffman_myip_0_0_sim_netlist.v
+//               C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_huffman_myip_0_0/design_1_huffman_myip_0_0_sim_netlist.v
 // Design      : design_1_huffman_myip_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -45,30 +45,54 @@ module design_1_huffman_myip_0_0
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 M00_AXIS_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M00_AXIS_RST, POLARITY ACTIVE_LOW" *) input m00_axis_aresetn;
 
   wire \<const0> ;
-  wire [31:0]m00_axis_tdata;
+  wire [15:0]\^m00_axis_tdata ;
   wire m00_axis_tready;
   wire m00_axis_tvalid;
   wire s00_axis_aclk;
   wire s00_axis_aresetn;
   wire [31:0]s00_axis_tdata;
+  wire s00_axis_tready;
   wire s00_axis_tvalid;
 
-  assign s00_axis_tready = \<const0> ;
+  assign m00_axis_tdata[31] = \<const0> ;
+  assign m00_axis_tdata[30] = \<const0> ;
+  assign m00_axis_tdata[29] = \<const0> ;
+  assign m00_axis_tdata[28] = \<const0> ;
+  assign m00_axis_tdata[27] = \<const0> ;
+  assign m00_axis_tdata[26] = \<const0> ;
+  assign m00_axis_tdata[25] = \<const0> ;
+  assign m00_axis_tdata[24] = \<const0> ;
+  assign m00_axis_tdata[23] = \<const0> ;
+  assign m00_axis_tdata[22] = \<const0> ;
+  assign m00_axis_tdata[21] = \<const0> ;
+  assign m00_axis_tdata[20] = \<const0> ;
+  assign m00_axis_tdata[19] = \<const0> ;
+  assign m00_axis_tdata[18] = \<const0> ;
+  assign m00_axis_tdata[17] = \<const0> ;
+  assign m00_axis_tdata[16] = \<const0> ;
+  assign m00_axis_tdata[15:0] = \^m00_axis_tdata [15:0];
+  assign m00_axis_tlast = \<const0> ;
+  assign m00_axis_tstrb[3] = \<const0> ;
+  assign m00_axis_tstrb[2] = \<const0> ;
+  assign m00_axis_tstrb[1] = \<const0> ;
+  assign m00_axis_tstrb[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
   design_1_huffman_myip_0_0_huffman_myip_v1_0 inst
-       (.m00_axis_tdata(m00_axis_tdata[15:0]),
+       (.m00_axis_tdata(\^m00_axis_tdata ),
         .m00_axis_tready(m00_axis_tready),
         .m00_axis_tvalid(m00_axis_tvalid),
         .s00_axis_aclk(s00_axis_aclk),
         .s00_axis_aresetn(s00_axis_aresetn),
         .s00_axis_tdata(s00_axis_tdata[7:0]),
+        .s00_axis_tready(s00_axis_tready),
         .s00_axis_tvalid(s00_axis_tvalid));
 endmodule
 
 (* ORIG_REF_NAME = "huffman_encoder" *) 
 module design_1_huffman_myip_0_0_huffman_encoder
    (m00_axis_tdata,
+    s00_axis_tready,
     m00_axis_tvalid,
     s00_axis_aresetn,
     m00_axis_tready,
@@ -76,6 +100,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
     s00_axis_tvalid,
     s00_axis_tdata);
   output [15:0]m00_axis_tdata;
+  output s00_axis_tready;
   output m00_axis_tvalid;
   input s00_axis_aresetn;
   input m00_axis_tready;
@@ -110,7 +135,6 @@ module design_1_huffman_myip_0_0_huffman_encoder
   wire [5:1]cl_sum_prev_reg__0;
   wire [0:0]cl_sum_prev_reg__1;
   wire cl_sum_rdy_i_1_n_0;
-  wire cl_sum_rdy_i_2_n_0;
   wire cl_sum_rdy_reg_n_0;
   wire [33:32]cl_sum_shift;
   wire [4:0]codelength_reg__0;
@@ -186,6 +210,9 @@ module design_1_huffman_myip_0_0_huffman_encoder
   wire i__carry_i_2_n_0;
   wire i__carry_i_3_n_0;
   wire i__carry_i_4_n_0;
+  wire in_ready_i_1_n_0;
+  wire in_ready_i_2_n_0;
+  wire in_ready_i_3_n_0;
   wire \lower_reg1[14]_i_1_n_0 ;
   wire \lower_reg1[15]_i_1_n_0 ;
   wire \lower_reg1_reg_n_0_[14] ;
@@ -410,6 +437,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
   wire s00_axis_aclk;
   wire s00_axis_aresetn;
   wire [7:0]s00_axis_tdata;
+  wire s00_axis_tready;
   wire s00_axis_tvalid;
   wire upper_reg1;
   wire \upper_reg1[0]_i_1_n_0 ;
@@ -473,7 +501,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
   wire [3:0]NLW_mult_out3_reg__0_CARRYOUT_UNCONNECTED;
   wire [47:0]NLW_mult_out3_reg__0_PCOUT_UNCONNECTED;
 
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \cl_sum[1]_i_1 
@@ -488,7 +516,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(cl_sum_prev_reg__1),
         .I2(cl_sum_prev_reg__0[2]),
         .O(\cl_sum[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h15EA)) 
     \cl_sum[3]_i_1 
@@ -497,7 +525,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I2(cl_sum_prev_reg__0[1]),
         .I3(cl_sum_prev_reg__0[3]),
         .O(\cl_sum[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'h0015FFEA)) 
     \cl_sum[4]_i_1 
@@ -569,7 +597,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I4(cl_sum_prev_reg__0[1]),
         .I5(codelength_reg__0[1]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \cl_sum_prev[1]_i_2 
@@ -684,24 +712,16 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .D(p_0_in[5]),
         .Q(cl_sum_prev_reg__0[5]),
         .R(s00_axis_aresetn));
-  LUT5 #(
-    .INIT(32'hFFFF0004)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFF00010000)) 
     cl_sum_rdy_i_1
-       (.I0(cl_sum_rdy_i_2_n_0),
-        .I1(\counter64_reg_n_0_[1] ),
-        .I2(\counter64_reg_n_0_[6] ),
-        .I3(\counter64_reg_n_0_[5] ),
-        .I4(cl_sum_rdy_reg_n_0),
+       (.I0(in_ready_i_2_n_0),
+        .I1(\counter64_reg_n_0_[0] ),
+        .I2(\counter64_reg_n_0_[2] ),
+        .I3(in_ready_i_3_n_0),
+        .I4(\counter64_reg_n_0_[1] ),
+        .I5(cl_sum_rdy_reg_n_0),
         .O(cl_sum_rdy_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    cl_sum_rdy_i_2
-       (.I0(\counter64_reg_n_0_[3] ),
-        .I1(\counter64_reg_n_0_[4] ),
-        .I2(\counter64_reg_n_0_[0] ),
-        .I3(\counter64_reg_n_0_[2] ),
-        .O(cl_sum_rdy_i_2_n_0));
   FDRE cl_sum_rdy_reg
        (.C(s00_axis_aclk),
         .CE(1'b1),
@@ -903,6 +923,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I4(counter32[4]),
         .I5(counter32[5]),
         .O(\counter32[0]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'h0069)) 
     \counter32[1]_i_1 
@@ -957,7 +978,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I4(counter32[0]),
         .I5(counter32[1]),
         .O(\counter32[3]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h0009)) 
     \counter32[4]_i_1 
@@ -966,7 +987,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I2(s00_axis_tvalid),
         .I3(\counter32[5]_i_3_n_0 ),
         .O(\counter32[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h000000E1)) 
     \counter32[5]_i_1 
@@ -976,7 +997,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I3(s00_axis_tvalid),
         .I4(\counter32[5]_i_3_n_0 ),
         .O(\counter32[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \counter32[5]_i_2 
@@ -1037,14 +1058,13 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(\counter64_reg_n_0_[6] ),
         .I2(\counter64_reg_n_0_[0] ),
         .O(\counter64[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \counter64[1]_i_1 
        (.I0(\counter64_reg_n_0_[0] ),
         .I1(\counter64_reg_n_0_[1] ),
         .O(\counter64[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \counter64[2]_i_1 
@@ -1088,6 +1108,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I4(\counter64_reg_n_0_[4] ),
         .I5(\counter64_reg_n_0_[5] ),
         .O(\counter64[5]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
     .INIT(16'h0F80)) 
     \counter64[6]_i_1 
@@ -1270,7 +1291,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .RSTREGB(1'b0),
         .WEA({1'b0,1'b0}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0}));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[0]_i_1 
@@ -1278,7 +1299,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(middle_reg3[0]),
         .I2(half_flag7),
         .O(\data_out[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[10]_i_1 
@@ -1286,7 +1307,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(middle_reg3[10]),
         .I2(half_flag7),
         .O(\data_out[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[11]_i_1 
@@ -1294,7 +1315,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(middle_reg3[11]),
         .I2(half_flag7),
         .O(\data_out[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[12]_i_1 
@@ -1302,7 +1323,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(middle_reg3[12]),
         .I2(half_flag7),
         .O(\data_out[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[13]_i_1 
@@ -1310,7 +1331,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(middle_reg3[13]),
         .I2(half_flag7),
         .O(\data_out[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[14]_i_1 
@@ -1325,7 +1346,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(full_flag8),
         .I2(half_flag7),
         .O(\data_out[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[15]_i_2 
@@ -1333,7 +1354,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(middle_reg3[15]),
         .I2(half_flag7),
         .O(\data_out[15]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[1]_i_1 
@@ -1341,7 +1362,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(middle_reg3[1]),
         .I2(half_flag7),
         .O(\data_out[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[2]_i_1 
@@ -1349,7 +1370,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(middle_reg3[2]),
         .I2(half_flag7),
         .O(\data_out[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[3]_i_1 
@@ -1365,7 +1386,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(middle_reg3[4]),
         .I2(half_flag7),
         .O(\data_out[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[5]_i_1 
@@ -1373,7 +1394,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(middle_reg3[5]),
         .I2(half_flag7),
         .O(\data_out[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[6]_i_1 
@@ -1381,7 +1402,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(middle_reg3[6]),
         .I2(half_flag7),
         .O(\data_out[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[7]_i_1 
@@ -1389,7 +1410,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(middle_reg3[7]),
         .I2(half_flag7),
         .O(\data_out[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[8]_i_1 
@@ -1397,7 +1418,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I1(middle_reg3[8]),
         .I2(half_flag7),
         .O(\data_out[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \data_out[9]_i_1 
@@ -1527,7 +1548,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .CLK(s00_axis_aclk),
         .D(full_flag1),
         .Q(full_flag4_reg_srl3___inst_huffman_encoder_inst_half_flag4_reg_r_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
     full_flag5_reg_gate
@@ -1602,7 +1623,7 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .CLK(s00_axis_aclk),
         .D(half_flag1),
         .Q(half_flag4_reg_srl3___inst_huffman_encoder_inst_half_flag4_reg_r_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
     half_flag5_reg_gate
@@ -1669,14 +1690,43 @@ module design_1_huffman_myip_0_0_huffman_encoder
        (.I0(codelength_reg__0[0]),
         .I1(cl_sum_prev_reg__1),
         .O(i__carry_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000008)) 
+    in_ready_i_1
+       (.I0(\counter64_reg_n_0_[0] ),
+        .I1(\counter64_reg_n_0_[2] ),
+        .I2(\counter64_reg_n_0_[1] ),
+        .I3(in_ready_i_2_n_0),
+        .I4(in_ready_i_3_n_0),
+        .I5(s00_axis_tready),
+        .O(in_ready_i_1_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    in_ready_i_2
+       (.I0(\counter64_reg_n_0_[4] ),
+        .I1(\counter64_reg_n_0_[3] ),
+        .O(in_ready_i_2_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    in_ready_i_3
+       (.I0(\counter64_reg_n_0_[6] ),
+        .I1(\counter64_reg_n_0_[5] ),
+        .O(in_ready_i_3_n_0));
+  FDRE in_ready_reg
+       (.C(s00_axis_aclk),
+        .CE(1'b1),
+        .D(in_ready_i_1_n_0),
+        .Q(s00_axis_tready),
+        .R(s00_axis_aresetn));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \lower_reg1[14]_i_1 
        (.I0(mult_out3_reg__0__0[0]),
         .I1(p_0_in_0[1]),
         .O(\lower_reg1[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \lower_reg1[15]_i_1 
@@ -2584,13 +2634,14 @@ module design_1_huffman_myip_0_0_huffman_encoder
         .I4(out_valid_i_4_n_0),
         .I5(m00_axis_tvalid),
         .O(out_valid_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h7)) 
     out_valid_i_2
        (.I0(counter32[3]),
         .I1(counter32[2]),
         .O(out_valid_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'hE)) 
     out_valid_i_3
@@ -2956,6 +3007,7 @@ endmodule
 (* ORIG_REF_NAME = "huffman_myip_v1_0" *) 
 module design_1_huffman_myip_0_0_huffman_myip_v1_0
    (m00_axis_tdata,
+    s00_axis_tready,
     m00_axis_tvalid,
     s00_axis_aresetn,
     m00_axis_tready,
@@ -2963,6 +3015,7 @@ module design_1_huffman_myip_0_0_huffman_myip_v1_0
     s00_axis_tvalid,
     s00_axis_tdata);
   output [15:0]m00_axis_tdata;
+  output s00_axis_tready;
   output m00_axis_tvalid;
   input s00_axis_aresetn;
   input m00_axis_tready;
@@ -2976,6 +3029,7 @@ module design_1_huffman_myip_0_0_huffman_myip_v1_0
   wire s00_axis_aclk;
   wire s00_axis_aresetn;
   wire [7:0]s00_axis_tdata;
+  wire s00_axis_tready;
   wire s00_axis_tvalid;
 
   design_1_huffman_myip_0_0_huffman_encoder huffman_encoder_inst
@@ -2985,6 +3039,7 @@ module design_1_huffman_myip_0_0_huffman_myip_v1_0
         .s00_axis_aclk(s00_axis_aclk),
         .s00_axis_aresetn(s00_axis_aresetn),
         .s00_axis_tdata(s00_axis_tdata),
+        .s00_axis_tready(s00_axis_tready),
         .s00_axis_tvalid(s00_axis_tvalid));
 endmodule
 `ifndef GLBL

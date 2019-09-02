@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Sat Aug 31 18:08:57 2019
+-- Date        : Mon Sep  2 09:59:02 2019
 -- Host        : Michael-laptop running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_huffman_myip_0_0/design_1_huffman_myip_0_0_sim_netlist.vhdl
+--               C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_huffman_myip_0_0/design_1_huffman_myip_0_0_sim_netlist.vhdl
 -- Design      : design_1_huffman_myip_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,6 +17,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_huffman_myip_0_0_huffman_encoder is
   port (
     m00_axis_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    s00_axis_tready : out STD_LOGIC;
     m00_axis_tvalid : out STD_LOGIC;
     s00_axis_aresetn : in STD_LOGIC;
     m00_axis_tready : in STD_LOGIC;
@@ -56,7 +57,6 @@ architecture STRUCTURE of design_1_huffman_myip_0_0_huffman_encoder is
   signal \cl_sum_prev_reg__0\ : STD_LOGIC_VECTOR ( 5 downto 1 );
   signal \cl_sum_prev_reg__1\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal cl_sum_rdy_i_1_n_0 : STD_LOGIC;
-  signal cl_sum_rdy_i_2_n_0 : STD_LOGIC;
   signal cl_sum_rdy_reg_n_0 : STD_LOGIC;
   signal cl_sum_shift : STD_LOGIC_VECTOR ( 33 downto 32 );
   signal \codelength_reg__0\ : STD_LOGIC_VECTOR ( 4 downto 0 );
@@ -132,6 +132,9 @@ architecture STRUCTURE of design_1_huffman_myip_0_0_huffman_encoder is
   signal \i__carry_i_2_n_0\ : STD_LOGIC;
   signal \i__carry_i_3_n_0\ : STD_LOGIC;
   signal \i__carry_i_4_n_0\ : STD_LOGIC;
+  signal in_ready_i_1_n_0 : STD_LOGIC;
+  signal in_ready_i_2_n_0 : STD_LOGIC;
+  signal in_ready_i_3_n_0 : STD_LOGIC;
   signal \lower_reg1[14]_i_1_n_0\ : STD_LOGIC;
   signal \lower_reg1[15]_i_1_n_0\ : STD_LOGIC;
   signal \lower_reg1_reg_n_0_[14]\ : STD_LOGIC;
@@ -351,6 +354,7 @@ architecture STRUCTURE of design_1_huffman_myip_0_0_huffman_encoder is
   signal out_valid_i_4_n_0 : STD_LOGIC;
   signal p_0_in : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal p_0_in_0 : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \^s00_axis_tready\ : STD_LOGIC;
   signal upper_reg1 : STD_LOGIC;
   signal \upper_reg1[0]_i_1_n_0\ : STD_LOGIC;
   signal \upper_reg1[10]_i_1_n_0\ : STD_LOGIC;
@@ -413,13 +417,12 @@ architecture STRUCTURE of design_1_huffman_myip_0_0_huffman_encoder is
   signal \NLW_mult_out3_reg__0_CARRYOUT_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_mult_out3_reg__0_PCOUT_UNCONNECTED\ : STD_LOGIC_VECTOR ( 47 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \cl_sum[1]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \cl_sum[1]_i_1\ : label is "soft_lutpair16";
   attribute SOFT_HLUTNM of \cl_sum[2]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \cl_sum[3]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \cl_sum[4]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \cl_sum_prev[1]_i_2\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \cl_sum[3]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \cl_sum[4]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \cl_sum_prev[1]_i_2\ : label is "soft_lutpair16";
   attribute SOFT_HLUTNM of \cl_sum_prev[2]_i_2\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of cl_sum_rdy_i_2 : label is "soft_lutpair5";
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ : string;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of codelength_reg : label is "p0_d5";
   attribute METHODOLOGY_DRC_VIOS : string;
@@ -436,13 +439,14 @@ architecture STRUCTURE of design_1_huffman_myip_0_0_huffman_encoder is
   attribute bram_slice_begin of codelength_reg : label is 0;
   attribute bram_slice_end : integer;
   attribute bram_slice_end of codelength_reg : label is 4;
-  attribute SOFT_HLUTNM of \counter32[4]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \counter32[5]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \counter32[5]_i_2\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \counter64[1]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \counter64[2]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \counter32[1]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \counter32[4]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \counter32[5]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \counter32[5]_i_2\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \counter64[2]_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \counter64[3]_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \counter64[4]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \counter64[6]_i_1\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \counter64[6]_i_2\ : label is "soft_lutpair2";
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of data_out1_reg : label is "p1_d16";
   attribute METHODOLOGY_DRC_VIOS of data_out1_reg : label is "{SYNTH-6 {cell *THIS*}}";
@@ -452,32 +456,35 @@ architecture STRUCTURE of design_1_huffman_myip_0_0_huffman_encoder is
   attribute bram_addr_end of data_out1_reg : label is 1023;
   attribute bram_slice_begin of data_out1_reg : label is 0;
   attribute bram_slice_end of data_out1_reg : label is 16;
-  attribute SOFT_HLUTNM of \data_out[0]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \data_out[10]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \data_out[11]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \data_out[12]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \data_out[13]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \data_out[14]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \data_out[15]_i_2\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \data_out[1]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \data_out[2]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \data_out[3]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \data_out[0]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \data_out[10]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \data_out[11]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \data_out[12]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \data_out[13]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \data_out[14]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \data_out[15]_i_2\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \data_out[1]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \data_out[2]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \data_out[3]_i_1\ : label is "soft_lutpair10";
   attribute SOFT_HLUTNM of \data_out[4]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \data_out[5]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \data_out[6]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \data_out[7]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \data_out[8]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \data_out[9]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \data_out[5]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \data_out[6]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \data_out[7]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \data_out[8]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \data_out[9]_i_1\ : label is "soft_lutpair14";
   attribute srl_name : string;
   attribute srl_name of \full_flag4_reg_srl3___inst_huffman_encoder_inst_half_flag4_reg_r\ : label is "\inst/huffman_encoder_inst/full_flag4_reg_srl3___inst_huffman_encoder_inst_half_flag4_reg_r ";
-  attribute SOFT_HLUTNM of full_flag5_reg_gate : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of full_flag5_reg_gate : label is "soft_lutpair18";
   attribute srl_name of \half_flag4_reg_srl3___inst_huffman_encoder_inst_half_flag4_reg_r\ : label is "\inst/huffman_encoder_inst/half_flag4_reg_srl3___inst_huffman_encoder_inst_half_flag4_reg_r ";
-  attribute SOFT_HLUTNM of half_flag5_reg_gate : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \lower_reg1[14]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \lower_reg1[15]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of out_valid_i_3 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of half_flag5_reg_gate : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of in_ready_i_3 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \lower_reg1[14]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \lower_reg1[15]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of out_valid_i_2 : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of out_valid_i_3 : label is "soft_lutpair6";
 begin
   m00_axis_tvalid <= \^m00_axis_tvalid\;
+  s00_axis_tready <= \^s00_axis_tready\;
 \cl_sum[1]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"9"
@@ -768,28 +775,18 @@ begin
       Q => \cl_sum_prev_reg__0\(5),
       R => s00_axis_aresetn
     );
-cl_sum_rdy_i_1: unisim.vcomponents.LUT5
+cl_sum_rdy_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFF0004"
+      INIT => X"FFFFFFFF00010000"
     )
         port map (
-      I0 => cl_sum_rdy_i_2_n_0,
-      I1 => \counter64_reg_n_0_[1]\,
-      I2 => \counter64_reg_n_0_[6]\,
-      I3 => \counter64_reg_n_0_[5]\,
-      I4 => cl_sum_rdy_reg_n_0,
+      I0 => in_ready_i_2_n_0,
+      I1 => \counter64_reg_n_0_[0]\,
+      I2 => \counter64_reg_n_0_[2]\,
+      I3 => in_ready_i_3_n_0,
+      I4 => \counter64_reg_n_0_[1]\,
+      I5 => cl_sum_rdy_reg_n_0,
       O => cl_sum_rdy_i_1_n_0
-    );
-cl_sum_rdy_i_2: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => \counter64_reg_n_0_[3]\,
-      I1 => \counter64_reg_n_0_[4]\,
-      I2 => \counter64_reg_n_0_[0]\,
-      I3 => \counter64_reg_n_0_[2]\,
-      O => cl_sum_rdy_i_2_n_0
     );
 cl_sum_rdy_reg: unisim.vcomponents.FDRE
      port map (
@@ -1977,6 +1974,45 @@ half_flag7_reg: unisim.vcomponents.FDRE
       I0 => \codelength_reg__0\(0),
       I1 => \cl_sum_prev_reg__1\(0),
       O => \i__carry_i_4_n_0\
+    );
+in_ready_i_1: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFE00000008"
+    )
+        port map (
+      I0 => \counter64_reg_n_0_[0]\,
+      I1 => \counter64_reg_n_0_[2]\,
+      I2 => \counter64_reg_n_0_[1]\,
+      I3 => in_ready_i_2_n_0,
+      I4 => in_ready_i_3_n_0,
+      I5 => \^s00_axis_tready\,
+      O => in_ready_i_1_n_0
+    );
+in_ready_i_2: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \counter64_reg_n_0_[4]\,
+      I1 => \counter64_reg_n_0_[3]\,
+      O => in_ready_i_2_n_0
+    );
+in_ready_i_3: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \counter64_reg_n_0_[6]\,
+      I1 => \counter64_reg_n_0_[5]\,
+      O => in_ready_i_3_n_0
+    );
+in_ready_reg: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axis_aclk,
+      CE => '1',
+      D => in_ready_i_1_n_0,
+      Q => \^s00_axis_tready\,
+      R => s00_axis_aresetn
     );
 \lower_reg1[14]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -3919,6 +3955,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_huffman_myip_0_0_huffman_myip_v1_0 is
   port (
     m00_axis_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    s00_axis_tready : out STD_LOGIC;
     m00_axis_tvalid : out STD_LOGIC;
     s00_axis_aresetn : in STD_LOGIC;
     m00_axis_tready : in STD_LOGIC;
@@ -3940,6 +3977,7 @@ huffman_encoder_inst: entity work.design_1_huffman_myip_0_0_huffman_encoder
       s00_axis_aclk => s00_axis_aclk,
       s00_axis_aresetn => s00_axis_aresetn,
       s00_axis_tdata(7 downto 0) => s00_axis_tdata(7 downto 0),
+      s00_axis_tready => s00_axis_tready,
       s00_axis_tvalid => s00_axis_tvalid
     );
 end STRUCTURE;
@@ -3976,6 +4014,7 @@ end design_1_huffman_myip_0_0;
 
 architecture STRUCTURE of design_1_huffman_myip_0_0 is
   signal \<const0>\ : STD_LOGIC;
+  signal \^m00_axis_tdata\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m00_axis_aclk : signal is "xilinx.com:signal:clock:1.0 M00_AXIS_CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -3999,40 +4038,41 @@ architecture STRUCTURE of design_1_huffman_myip_0_0 is
   attribute X_INTERFACE_INFO of s00_axis_tdata : signal is "xilinx.com:interface:axis:1.0 S00_AXIS TDATA";
   attribute X_INTERFACE_INFO of s00_axis_tstrb : signal is "xilinx.com:interface:axis:1.0 S00_AXIS TSTRB";
 begin
-  s00_axis_tready <= \<const0>\;
-  m00_axis_tlast <= 'Z';
-  m00_axis_tdata(16) <= 'Z';
-  m00_axis_tdata(17) <= 'Z';
-  m00_axis_tdata(18) <= 'Z';
-  m00_axis_tdata(19) <= 'Z';
-  m00_axis_tdata(20) <= 'Z';
-  m00_axis_tdata(21) <= 'Z';
-  m00_axis_tdata(22) <= 'Z';
-  m00_axis_tdata(23) <= 'Z';
-  m00_axis_tdata(24) <= 'Z';
-  m00_axis_tdata(25) <= 'Z';
-  m00_axis_tdata(26) <= 'Z';
-  m00_axis_tdata(27) <= 'Z';
-  m00_axis_tdata(28) <= 'Z';
-  m00_axis_tdata(29) <= 'Z';
-  m00_axis_tdata(30) <= 'Z';
-  m00_axis_tdata(31) <= 'Z';
-  m00_axis_tstrb(0) <= 'Z';
-  m00_axis_tstrb(1) <= 'Z';
-  m00_axis_tstrb(2) <= 'Z';
-  m00_axis_tstrb(3) <= 'Z';
+  m00_axis_tdata(31) <= \<const0>\;
+  m00_axis_tdata(30) <= \<const0>\;
+  m00_axis_tdata(29) <= \<const0>\;
+  m00_axis_tdata(28) <= \<const0>\;
+  m00_axis_tdata(27) <= \<const0>\;
+  m00_axis_tdata(26) <= \<const0>\;
+  m00_axis_tdata(25) <= \<const0>\;
+  m00_axis_tdata(24) <= \<const0>\;
+  m00_axis_tdata(23) <= \<const0>\;
+  m00_axis_tdata(22) <= \<const0>\;
+  m00_axis_tdata(21) <= \<const0>\;
+  m00_axis_tdata(20) <= \<const0>\;
+  m00_axis_tdata(19) <= \<const0>\;
+  m00_axis_tdata(18) <= \<const0>\;
+  m00_axis_tdata(17) <= \<const0>\;
+  m00_axis_tdata(16) <= \<const0>\;
+  m00_axis_tdata(15 downto 0) <= \^m00_axis_tdata\(15 downto 0);
+  m00_axis_tlast <= \<const0>\;
+  m00_axis_tstrb(3) <= \<const0>\;
+  m00_axis_tstrb(2) <= \<const0>\;
+  m00_axis_tstrb(1) <= \<const0>\;
+  m00_axis_tstrb(0) <= \<const0>\;
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
 inst: entity work.design_1_huffman_myip_0_0_huffman_myip_v1_0
      port map (
-      m00_axis_tdata(15 downto 0) => m00_axis_tdata(15 downto 0),
+      m00_axis_tdata(15 downto 0) => \^m00_axis_tdata\(15 downto 0),
       m00_axis_tready => m00_axis_tready,
       m00_axis_tvalid => m00_axis_tvalid,
       s00_axis_aclk => s00_axis_aclk,
       s00_axis_aresetn => s00_axis_aresetn,
       s00_axis_tdata(7 downto 0) => s00_axis_tdata(7 downto 0),
+      s00_axis_tready => s00_axis_tready,
       s00_axis_tvalid => s00_axis_tvalid
     );
 end STRUCTURE;

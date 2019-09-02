@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Mon Aug 26 20:00:38 2019
+-- Date        : Mon Sep  2 10:02:39 2019
 -- Host        : Michael-laptop running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_axi_dma_0_1 -prefix
---               design_1_axi_dma_0_1_ design_1_axi_dma_0_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub
+--               C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_1/design_1_axi_dma_0_1_stub.vhdl
 -- Design      : design_1_axi_dma_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

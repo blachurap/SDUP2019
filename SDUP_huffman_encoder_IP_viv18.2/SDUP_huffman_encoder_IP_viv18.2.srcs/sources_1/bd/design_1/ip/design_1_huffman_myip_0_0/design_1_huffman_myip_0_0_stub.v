@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sat Aug 31 18:08:57 2019
+// Date        : Mon Sep  2 09:59:02 2019
 // Host        : Michael-laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_huffman_myip_0_0/design_1_huffman_myip_0_0_stub.v
+//               C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.srcs/sources_1/bd/design_1/ip/design_1_huffman_myip_0_0/design_1_huffman_myip_0_0_stub.v
 // Design      : design_1_huffman_myip_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

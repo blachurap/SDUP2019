@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:huffman_myip:1.0
-// IP Revision: 6
+// IP Revision: 8
 
 (* X_CORE_INFO = "huffman_myip_v1_0,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_huffman_myip_0_0,huffman_myip_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "design_1_huffman_myip_0_0,huffman_myip_v1_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=huffman_myip,x_ipVersion=1.0,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXIS_TDATA_WIDTH=32,C_M00_AXIS_TDATA_WIDTH=32,C_M00_AXIS_START_COUNT=32}" *)
+(* CORE_GENERATION_INFO = "design_1_huffman_myip_0_0,huffman_myip_v1_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=huffman_myip,x_ipVersion=1.0,x_ipCoreRevision=8,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXIS_TDATA_WIDTH=32,C_M00_AXIS_TDATA_WIDTH=32,C_M00_AXIS_START_COUNT=32}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_huffman_myip_0_0 (
   s00_axis_tdata,
