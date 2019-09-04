@@ -1,0 +1,773 @@
+16:46:02 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:46:05 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:59:02 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 's2mm_isr':
+../src/helloworld.c:86:3: error: 'g_dma_err' undeclared (first use in this function); did you mean 'p_dma_inst'?
+   g_dma_err = 1;
+   ^~~~~~~~~
+   p_dma_inst
+../src/helloworld.c:86:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:91:14: error: 'RESET_TIMEOUT_COUNTER' undeclared (first use in this function)
+   time_out = RESET_TIMEOUT_COUNTER;
+              ^~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:105:3: error: 'g_s2mm_done' undeclared (first use in this function)
+   g_s2mm_done = 1;
+   ^~~~~~~~~~~
+At top level:
+../src/helloworld.c:58:13: warning: 's2mm_isr' defined but not used [-Wunused-function]
+ static void s2mm_isr(void* CallbackRef)
+             ^~~~~~~~
+make: *** [src/helloworld.o] B³¹d 1
+16:59:15 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 's2mm_isr':
+../src/helloworld.c:94:14: error: 'RESET_TIMEOUT_COUNTER' undeclared (first use in this function)
+   time_out = RESET_TIMEOUT_COUNTER;
+              ^~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:94:14: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../src/helloworld.c:61:13: warning: 's2mm_isr' defined but not used [-Wunused-function]
+ static void s2mm_isr(void* CallbackRef)
+             ^~~~~~~~
+../src/helloworld.c:58:12: warning: 'g_mm2s_done' defined but not used [-Wunused-variable]
+ static int g_mm2s_done = 0;
+            ^~~~~~~~~~~
+make: *** [src/helloworld.o] B³¹d 1
+16:59:36 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:63:13: warning: 's2mm_isr' defined but not used [-Wunused-function]
+ static void s2mm_isr(void* CallbackRef)
+             ^~~~~~~~
+../src/helloworld.c:60:12: warning: 'g_mm2s_done' defined but not used [-Wunused-variable]
+ static int g_mm2s_done = 0;
+            ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37604	   2256	  24520	  64380	   fb7c	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+16:59:50 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:119:13: warning: 's2mm_isr' defined but not used [-Wunused-function]
+ static void s2mm_isr(void* CallbackRef)
+             ^~~~~~~~
+../src/helloworld.c:63:13: warning: 'mm2s_isr' defined but not used [-Wunused-function]
+ static void mm2s_isr(void* CallbackRef)
+             ^~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  38052	   2256	  24520	  64828	   fd3c	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:00:37 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:174:22: error: unknown type name 'XScuGic'
+ static int init_intc(XScuGic* p_intc_inst, int intc_device_id, XAxiDma* p_dma_inst, int s2mm_intr_id, int mm2s_intr_id)
+                      ^~~~~~~
+../src/helloworld.c:119:13: warning: 's2mm_isr' defined but not used [-Wunused-function]
+ static void s2mm_isr(void* CallbackRef)
+             ^~~~~~~~
+../src/helloworld.c:63:13: warning: 'mm2s_isr' defined but not used [-Wunused-function]
+ static void mm2s_isr(void* CallbackRef)
+             ^~~~~~~~
+make: *** [src/helloworld.o] B³¹d 1
+17:01:02 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'init_intc':
+../src/helloworld.c:187:10: error: 'DMA_PASSTHROUGH_INTC_INIT_FAIL' undeclared (first use in this function); did you mean 'DMA_PASSTHROUGH_DMA_INIT_FAIL'?
+   return DMA_PASSTHROUGH_INTC_INIT_FAIL;
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          DMA_PASSTHROUGH_DMA_INIT_FAIL
+../src/helloworld.c:187:10: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../src/helloworld.c:175:12: warning: 'init_intc' defined but not used [-Wunused-function]
+ static int init_intc(XScuGic* p_intc_inst, int intc_device_id, XAxiDma* p_dma_inst, int s2mm_intr_id, int mm2s_intr_id)
+            ^~~~~~~~~
+make: *** [src/helloworld.o] B³¹d 1
+17:01:17 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'init_intc':
+../src/helloworld.c:194:10: error: 'DMA_PASSTHROUGH_INTC_INIT_FAIL' undeclared (first use in this function); did you mean 'DMA_PASSTHROUGH_DMA_INIT_FAIL'?
+   return DMA_PASSTHROUGH_INTC_INIT_FAIL;
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          DMA_PASSTHROUGH_DMA_INIT_FAIL
+../src/helloworld.c:194:10: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../src/helloworld.c:175:12: warning: 'init_intc' defined but not used [-Wunused-function]
+ static int init_intc(XScuGic* p_intc_inst, int intc_device_id, XAxiDma* p_dma_inst, int s2mm_intr_id, int mm2s_intr_id)
+            ^~~~~~~~~
+make: *** [src/helloworld.o] B³¹d 1
+17:01:24 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'init_intc':
+../src/helloworld.c:205:10: error: 'DMA_PASSTHROUGH_INTC_INIT_FAIL' undeclared (first use in this function); did you mean 'DMA_PASSTHROUGH_DMA_INIT_FAIL'?
+   return DMA_PASSTHROUGH_INTC_INIT_FAIL;
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          DMA_PASSTHROUGH_DMA_INIT_FAIL
+../src/helloworld.c:205:10: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../src/helloworld.c:175:12: warning: 'init_intc' defined but not used [-Wunused-function]
+ static int init_intc(XScuGic* p_intc_inst, int intc_device_id, XAxiDma* p_dma_inst, int s2mm_intr_id, int mm2s_intr_id)
+            ^~~~~~~~~
+make: *** [src/helloworld.o] B³¹d 1
+17:01:41 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:175:12: warning: 'init_intc' defined but not used [-Wunused-function]
+ static int init_intc(XScuGic* p_intc_inst, int intc_device_id, XAxiDma* p_dma_inst, int s2mm_intr_id, int mm2s_intr_id)
+            ^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41888	   3832	  24536	  70256	  11270	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:02:28 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:175:12: warning: 'init_intc' defined but not used [-Wunused-function]
+ static int init_intc(XScuGic* p_intc_inst, int intc_device_id, XAxiDma* p_dma_inst, int s2mm_intr_id, int mm2s_intr_id)
+            ^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41952	   3832	  24536	  70320	  112b0	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:04:16 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:276:4: error: 'p_obj' undeclared (first use in this function)
+   &p_obj->periphs.intc_inst,
+    ^~~~~
+../src/helloworld.c:276:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:277:3: error: 'intc_device_id' undeclared (first use in this function)
+   intc_device_id,
+   ^~~~~~~~~~~~~~
+../src/helloworld.c:279:3: error: 's2mm_intr_id' undeclared (first use in this function); did you mean 's2mm_isr'?
+   s2mm_intr_id,
+   ^~~~~~~~~~~~
+   s2mm_isr
+../src/helloworld.c:280:3: error: 'mm2s_intr_id' undeclared (first use in this function); did you mean 's2mm_intr_id'?
+   mm2s_intr_id
+   ^~~~~~~~~~~~
+   s2mm_intr_id
+make: *** [src/helloworld.o] B³¹d 1
+17:12:25 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:278:3: error: 's2mm_intr_id' undeclared (first use in this function); did you mean 's2mm_isr'?
+   s2mm_intr_id,
+   ^~~~~~~~~~~~
+   s2mm_isr
+../src/helloworld.c:278:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:279:3: error: 'mm2s_intr_id' undeclared (first use in this function); did you mean 's2mm_intr_id'?
+   mm2s_intr_id
+   ^~~~~~~~~~~~
+   s2mm_intr_id
+In file included from ../../huffman_bsp/ps7_cortexa9_0/include/xparameters.h:19:0,
+                 from ../../huffman_bsp/ps7_cortexa9_0/include/xil_printf.h:12,
+                 from ../src/helloworld.c:50:
+../../huffman_bsp/ps7_cortexa9_0/include/xparameters_ps.h:135:35: warning: passing argument 1 of 'init_intc' makes pointer from integer without a cast [-Wint-conversion]
+ #define XPAR_SCUGIC_NUM_INSTANCES 1U
+                                   ^
+../src/helloworld.c:275:4: note: in expansion of macro 'XPAR_SCUGIC_NUM_INSTANCES'
+  ( XPAR_SCUGIC_NUM_INSTANCES,
+    ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:175:12: note: expected 'XScuGic * {aka struct <anonymous> *}' but argument is of type 'unsigned int'
+ static int init_intc(XScuGic* p_intc_inst, int intc_device_id, XAxiDma* p_dma_inst, int s2mm_intr_id, int mm2s_intr_id)
+            ^~~~~~~~~
+../src/helloworld.c:277:3: error: incompatible type for argument 3 of 'init_intc'
+   dma_inst,
+   ^~~~~~~~
+../src/helloworld.c:175:12: note: expected 'XAxiDma * {aka struct XAxiDma *}' but argument is of type 'XAxiDma {aka struct XAxiDma}'
+ static int init_intc(XScuGic* p_intc_inst, int intc_device_id, XAxiDma* p_dma_inst, int s2mm_intr_id, int mm2s_intr_id)
+            ^~~~~~~~~
+make: *** [src/helloworld.o] B³¹d 1
+17:12:33 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:278:3: error: 's2mm_intr_id' undeclared (first use in this function); did you mean 's2mm_isr'?
+   s2mm_intr_id,
+   ^~~~~~~~~~~~
+   s2mm_isr
+../src/helloworld.c:278:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:279:3: error: 'mm2s_intr_id' undeclared (first use in this function); did you mean 's2mm_intr_id'?
+   mm2s_intr_id
+   ^~~~~~~~~~~~
+   s2mm_intr_id
+In file included from ../../huffman_bsp/ps7_cortexa9_0/include/xparameters.h:19:0,
+                 from ../../huffman_bsp/ps7_cortexa9_0/include/xil_printf.h:12,
+                 from ../src/helloworld.c:50:
+../../huffman_bsp/ps7_cortexa9_0/include/xparameters_ps.h:135:35: warning: passing argument 1 of 'init_intc' makes pointer from integer without a cast [-Wint-conversion]
+ #define XPAR_SCUGIC_NUM_INSTANCES 1U
+                                   ^
+../src/helloworld.c:275:4: note: in expansion of macro 'XPAR_SCUGIC_NUM_INSTANCES'
+  ( XPAR_SCUGIC_NUM_INSTANCES,
+    ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:175:12: note: expected 'XScuGic * {aka struct <anonymous> *}' but argument is of type 'unsigned int'
+ static int init_intc(XScuGic* p_intc_inst, int intc_device_id, XAxiDma* p_dma_inst, int s2mm_intr_id, int mm2s_intr_id)
+            ^~~~~~~~~
+make: *** [src/helloworld.o] B³¹d 1
+17:13:48 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:279:3: error: 's2mm_intr_id' undeclared (first use in this function); did you mean 's2mm_isr'?
+   s2mm_intr_id,
+   ^~~~~~~~~~~~
+   s2mm_isr
+../src/helloworld.c:279:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:280:3: error: 'mm2s_intr_id' undeclared (first use in this function); did you mean 's2mm_intr_id'?
+   mm2s_intr_id
+   ^~~~~~~~~~~~
+   s2mm_intr_id
+../src/helloworld.c:276:4: error: incompatible type for argument 1 of 'init_intc'
+  ( intc_inst,
+    ^~~~~~~~~
+../src/helloworld.c:176:12: note: expected 'XScuGic * {aka struct <anonymous> *}' but argument is of type 'XScuGic {aka struct <anonymous>}'
+ static int init_intc(XScuGic* p_intc_inst, int intc_device_id, XAxiDma* p_dma_inst, int s2mm_intr_id, int mm2s_intr_id)
+            ^~~~~~~~~
+make: *** [src/helloworld.o] B³¹d 1
+17:14:26 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:280:3: error: 's2mm_intr_id' undeclared (first use in this function); did you mean 's2mm_isr'?
+   s2mm_intr_id,
+   ^~~~~~~~~~~~
+   s2mm_isr
+../src/helloworld.c:280:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:281:3: error: 'mm2s_intr_id' undeclared (first use in this function); did you mean 's2mm_intr_id'?
+   mm2s_intr_id
+   ^~~~~~~~~~~~
+   s2mm_intr_id
+make: *** [src/helloworld.o] B³¹d 1
+17:15:25 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:280:3: error: 'XPAR_FABRIC_DATAPATH_AXI_DMA_1_S2MM_INTROUT_INTR' undeclared (first use in this function); did you mean 'XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR'?
+   XPAR_FABRIC_DATAPATH_AXI_DMA_1_S2MM_INTROUT_INTR,
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR
+../src/helloworld.c:280:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:281:3: error: 'XPAR_FABRIC_DATAPATH_AXI_DMA_1_MM2S_INTROUT_INTR' undeclared (first use in this function); did you mean 'XPAR_FABRIC_DATAPATH_AXI_DMA_1_S2MM_INTROUT_INTR'?
+   XPAR_FABRIC_DATAPATH_AXI_DMA_1_MM2S_INTROUT_INTR
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   XPAR_FABRIC_DATAPATH_AXI_DMA_1_S2MM_INTROUT_INTR
+make: *** [src/helloworld.o] B³¹d 1
+17:17:09 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:280:3: error: 'XPAR_FABRIC_DATAPATH_AXI_DMA_0_S2MM_INTROUT_INTR' undeclared (first use in this function); did you mean 'XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR'?
+   XPAR_FABRIC_DATAPATH_AXI_DMA_0_S2MM_INTROUT_INTR,
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR
+../src/helloworld.c:280:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:281:3: error: 'XPAR_FABRIC_DATAPATH_AXI_DMA_0_MM2S_INTROUT_INTR' undeclared (first use in this function); did you mean 'XPAR_FABRIC_DATAPATH_AXI_DMA_0_S2MM_INTROUT_INTR'?
+   XPAR_FABRIC_DATAPATH_AXI_DMA_0_MM2S_INTROUT_INTR
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   XPAR_FABRIC_DATAPATH_AXI_DMA_0_S2MM_INTROUT_INTR
+make: *** [src/helloworld.o] B³¹d 1
+17:18:23 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42068	   3832	  24536	  70436	  11324	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:23:33 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'dma_snd':
+../src/helloworld.c:238:29: error: 'p_dma_passthrough_inst' undeclared (first use in this function); did you mean 'dma_passthrough_snd'?
+   Xil_DCacheFlushRange((int)p_dma_passthrough_inst->p_snd_buf, num_bytes);
+                             ^~~~~~~~~~~~~~~~~~~~~~
+                             dma_passthrough_snd
+../src/helloworld.c:238:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:252:3: warning: passing argument 2 of 'XAxiDma_SimpleTransfer' makes integer from pointer without a cast [-Wint-conversion]
+   p_snd_buf,
+   ^~~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../huffman_bsp/ps7_cortexa9_0/include/xaxidma.h:755:5: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ u32 XAxiDma_SimpleTransfer(XAxiDma *InstancePtr, UINTPTR BuffAddr, u32 Length,
+     ^~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/helloworld.o] B³¹d 1
+17:23:45 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'dma_snd':
+../src/helloworld.c:238:24: warning: passing argument 1 of 'Xil_DCacheFlushRange' makes integer from pointer without a cast [-Wint-conversion]
+   Xil_DCacheFlushRange(p_snd_buf, num_bytes);
+                        ^~~~~~~~~
+In file included from ../../huffman_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:120:0,
+                 from ../../huffman_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:87,
+                 from ../../huffman_bsp/ps7_cortexa9_0/include/xaxidma.h:492,
+                 from ../src/helloworld.c:51:
+../../huffman_bsp/ps7_cortexa9_0/include/xil_cache.h:107:6: note: expected 'INTPTR {aka int}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void Xil_DCacheFlushRange(INTPTR adr, u32 len);
+      ^~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:252:3: warning: passing argument 2 of 'XAxiDma_SimpleTransfer' makes integer from pointer without a cast [-Wint-conversion]
+   p_snd_buf,
+   ^~~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../huffman_bsp/ps7_cortexa9_0/include/xaxidma.h:755:5: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ u32 XAxiDma_SimpleTransfer(XAxiDma *InstancePtr, UINTPTR BuffAddr, u32 Length,
+     ^~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42496	   3832	  24536	  70864	  114d0	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:23:56 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'dma_snd':
+../src/helloworld.c:252:3: warning: passing argument 2 of 'XAxiDma_SimpleTransfer' makes integer from pointer without a cast [-Wint-conversion]
+   p_snd_buf,
+   ^~~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../huffman_bsp/ps7_cortexa9_0/include/xaxidma.h:755:5: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ u32 XAxiDma_SimpleTransfer(XAxiDma *InstancePtr, UINTPTR BuffAddr, u32 Length,
+     ^~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42496	   3832	  24536	  70864	  114d0	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:24:15 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42496	   3832	  24536	  70864	  114d0	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:26:30 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:275:5: error: conflicting types for 'dma_passthrough_rcv'
+ int dma_passthrough_rcv(XAxiDma* p_dma_inst, uint16_t* p_rcv_buf)
+     ^~~~~~~~~~~~~~~~~~~
+In file included from ../src/helloworld.c:52:0:
+../src/dma_passthrough.h:167:5: note: previous declaration of 'dma_passthrough_rcv' was here
+ int dma_passthrough_rcv(dma_passthrough_t* p_dma_passthrough_inst);
+     ^~~~~~~~~~~~~~~~~~~
+make: *** [src/helloworld.o] B³¹d 1
+17:26:51 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42924	   3832	  24536	  71292	  1167c	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:28:58 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42760	   3832	  24536	  71128	  115d8	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:29:45 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42764	   3832	  24536	  71132	  115dc	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:31:45 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:32:06 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:32:43 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:33:20 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:33:47 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:34:14 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:34:26 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:34:50 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:35:34 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:36:35 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:37:12 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:40:34 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42848	   3832	  24536	  71216	  11630	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:41:40 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42860	   3832	  24536	  71228	  1163c	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:41:43 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:54:21 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42940	   3832	  24536	  71308	  1168c	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:54:27 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:54:46 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:55:41 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42948	   3832	  24536	  71316	  11694	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:55:45 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:56:41 **** Auto Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../huffman_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: huffman.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../huffman_bsp/ps7_cortexa9_0/lib -o "huffman.elf"  ./src/dma_passthrough.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: huffman.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size huffman.elf  |tee "huffman.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42964	   3832	  24536	  71332	  116a4	huffman.elf
+'Finished building: huffman.elf.size'
+' '
+17:56:44 **** Incremental Build of configuration Debug for project huffman ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.

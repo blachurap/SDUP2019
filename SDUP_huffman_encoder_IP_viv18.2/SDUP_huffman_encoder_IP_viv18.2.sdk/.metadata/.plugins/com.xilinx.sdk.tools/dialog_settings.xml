@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="" key="&lt;None&gt;-offSet"/>
+	<item value="&lt;None&gt;" key="programflash.hwplatform"/>
+	<item value="" key="&lt;None&gt;-imgFile"/>
+	<item value="Auto Detect" key="&lt;None&gt;-device"/>
+	<item value="C:\Users\Michał\Downloads\dma_ex_polled_v2_1\dma_ex_polled\bin\dma_ex_polled.elf" key="&lt;None&gt;-fsblFile"/>
+	<item value="qspi_single" key="&lt;None&gt;-flashType"/>
+	<item value="false" key="&lt;None&gt;-blankCheck"/>
+	<item value="Local" key="&lt;None&gt;-target"/>
+	<item value="false" key="&lt;None&gt;-verifyFlash"/>
+</section>

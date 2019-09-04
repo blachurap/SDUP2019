@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Sep  3 10:55:37 2019
+# Process ID: 6476
+# Current directory: C:/SDUP_huffman_encoder_IP_viv18.2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2808 C:\SDUP_huffman_encoder_IP_viv18.2\SDUP_huffman_encoder_IP_viv18.2.xpr
+# Log file: C:/SDUP_huffman_encoder_IP_viv18.2/vivado.log
+# Journal file: C:/SDUP_huffman_encoder_IP_viv18.2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ip_repo/huffman_myip_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ip_repo/huffman_encoder_myip_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/ip_repo/huffman_myip_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ip_repo/huffman_myip_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 817.699 ; gain = 167.418
+update_compile_order -fileset sources_1
+file mkdir C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.sdk
+file copy -force C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.runs/impl_1/design_1_wrapper.sysdef C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.sdk -hwspec C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.sdk -hwspec C:/SDUP_huffman_encoder_IP_viv18.2/SDUP_huffman_encoder_IP_viv18.2.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Sep  3 11:44:14 2019...
