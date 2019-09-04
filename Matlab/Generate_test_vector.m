@@ -4,7 +4,7 @@ function [vector] = Generate_test_vector(distribution, symbols_quantity, lenght)
 	left_positon = 1;
        
     for n=1:symbols_quantity
-        right_position = floor(lenght*distribution(n)/100) + left_positon;
+        right_position = floor(lenght*distribution(n)) + left_positon;
 
         for i = left_positon:right_position
             if i > lenght
